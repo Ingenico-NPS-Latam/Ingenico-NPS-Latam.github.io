@@ -1,0 +1,11 @@
+ComplexElement verificationServicesResult = response.getComplexElement("VerificationServicesResult");
+
+fmt.Printf(verificationServicesResult.ResultCodeCardSecurityCode)
+fmt.Printf(verificationServicesResult.ResultCodeBillingAddress)
+fmt.Printf(verificationServicesResult.ResultCodeBillingAddressZipCode)
+fmt.Printf(verificationServicesResult.ResultCodeBillingPersonIDType)
+fmt.Printf(verificationServicesResult.ResultCodeBillingPersonIDNumber)
+fmt.Printf(verificationServicesResult.ResultCodeBillingPersonDateOfBirth)
+fmt.Printf(verificationServicesResult.ResultCodeBillingPersonName)
+fmt.Printf(verificationServicesResult.ResultCodeBillingPersonPhoneNumber1)
+fmt.Printf(verificationServicesResult.ResultCodeCustomerEmailAddress)

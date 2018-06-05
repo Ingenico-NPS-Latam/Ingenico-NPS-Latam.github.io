@@ -1,0 +1,27 @@
+use NpsPerlSDK::Nps;
+use warnings;
+use strict;
+
+NpsPerlSDK::Configuration::configure( 
+    environment => $constants::SANDBOX_ENV,
+    secret_key => "_YOUR_SECRET_KEY_",
+    sanitize => 1 
+    );
+
+my $params = {
+    "psp_Version" => "2.2",
+    "psp_MerchantId" => "sdk_test",
+    "psp_TxSource" => "WEB",
+    "psp_MerchTxRef" => "ORDER66666-3",
+    "psp_MerchOrderId" => "ORDER66666",
+    "psp_Amount" => "15050",
+    "psp_NumPayments" => "1",
+    "psp_Currency" => "032",
+    "psp_Country" => "ARG",
+    "psp_Product" => "14",
+    "psp_CardNumber" => "4507990000000010",
+    "psp_CardExpDate" => "1912",
+    "psp_PosDateTime" => "2019-12-01 12:00:00",
+};
+
+my $response = NpsPerlSDK::Nps::fraud_screening($params);

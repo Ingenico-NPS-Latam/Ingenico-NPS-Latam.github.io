@@ -1,0 +1,24 @@
+import nps_sdk
+from nps_sdk.constants import PRODUCTION_ENV, STAGING_ENV, SANDBOX_ENV
+from nps_sdk.errors import ApiException
+
+nps_sdk.Configuration.configure(environment=SANDBOX_ENV,
+                            secret_key="_YOUR_SECRET_KEY_")
+sdk = nps_sdk.Nps()
+
+params = {
+    'psp_Version': '2.2',
+    'psp_MerchantId': 'sdk_test',
+    'psp_PaymentMethodId': 'Nzmd7DyGytXXC5PtKwnCsXXuQWHJB9EE',
+    'psp_PaymentMethodTag': 'Corporate card',
+    'psp_CardInputDetails': {
+        'ExpirationDate': '2501'
+    },
+    'psp_PosDateTime': '2008-01-12 13:05:00'
+}
+
+try: 
+    response = sdk.update_payment_method(params) 
+except ApiException: 
+    # Code to handle error 
+    pass 

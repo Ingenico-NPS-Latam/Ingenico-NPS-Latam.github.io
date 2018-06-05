@@ -1,0 +1,52 @@
+local nps = require("npssdk")
+nps.configuration.environment= nps.SANDBOX_ENV
+nps.configuration.secret_key = "_YOUR_SECRET_KEY_"
+
+
+createpaymentmethod = {}
+
+createpaymentmethod.psp_Version = "2.2"
+createpaymentmethod.psp_MerchantId = "sdk_test"
+
+pspPaymentMethod = {}
+
+CardInputDetails = {}
+CardInputDetails.Number = "4507990000000010"
+CardInputDetails.ExpirationDate = "2501"
+CardInputDetails.SecurityCode = "123"
+CardInputDetails.HolderName = "JOHN DOE"
+
+pspPaymentMethod.CardInputDetails = CardInputDetails
+pspPaymentMethod.PaymentMethodTag = "Corporate card"
+
+Person = {}
+Person.FirstName = "John"
+Person.LastName = "Doe"
+Person.MiddleName = "Michael"
+Person.PhoneNumber1 = "+1 011 11111111"
+Person.PhoneNumber2 = "+1 011 22222222"
+Person.DateOfBirth = "1979-01-12"
+Person.Gender = "M"
+Person.Nationality = "ARG"
+Person.IDNumber = "54111111"
+Person.IDType = "200"
+
+pspPaymentMethod.Person = Person
+
+Address = {}
+Address.Street = "Av. Collins"
+Address.HouseNumber = "4702"
+Address.AdditionalInfo = "2 A"
+Address.City = "Buenos Aires"
+Address.StateProvince = "CABA"
+Address.Country = "ARG"
+Address.ZipCode = "1425"
+
+pspPaymentMethod.Address = Address
+
+createpaymentmethod.psp_PaymentMethod = pspPaymentMethod
+createpaymentmethod.psp_PosDateTime = "2008-01-12 13:05:00"
+
+response = nps.create_payment_method(createpaymentmethod)
+
+print(resp.psp_ResponseCod)

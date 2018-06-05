@@ -1,0 +1,11 @@
+response, err := service.RetrieveCustomer(retrieveCustomer)
+
+fmt.Printf(response.Psp_ResponseCod)
+fmt.Printf(response.Psp_ResponseMsg)
+fmt.Printf(response.Psp_MerchantId)
+fmt.Printf(response.Psp_CustomerId)
+fmt.Printf(response.Psp_EmailAddress)
+fmt.Printf(response.Psp_AlternativeEmailAddress)
+fmt.Printf(response.Psp_AccountID)
+fmt.Printf(response.Psp_AccountCreatedAt)
+fmt.Printf(response.Psp_PosDateTime)

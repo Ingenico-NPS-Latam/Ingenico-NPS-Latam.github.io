@@ -1,0 +1,21 @@
+response, err := service.FraudScreening(fraudScreening)
+
+fmt.Printf(response.Psp_ResponseCod)
+fmt.Printf(response.Psp_ResponseMsg)
+
+pspResult := response.Psp_Result
+fmt.Printf(pspResult.ResultCode)
+fmt.Printf(pspResult.ResultDescription)
+
+fmt.Printf(response.Psp_OrderId)
+fmt.Printf(response.Psp_MerchantId)
+fmt.Printf(response.Psp_MerchTxRef)
+fmt.Printf(response.Psp_MerchOrderId)
+fmt.Printf(response.Psp_Amount)
+fmt.Printf(response.Psp_NumPayments)
+fmt.Printf(response.Psp_Currency)
+fmt.Printf(response.Psp_Country)
+fmt.Printf(response.Psp_Product)
+fmt.Printf(response.Psp_CardNumber)
+fmt.Printf(response.Psp_CardExpDate)
+fmt.Printf(response.Psp_PosDateTime)

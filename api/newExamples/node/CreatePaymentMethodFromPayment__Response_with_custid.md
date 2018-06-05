@@ -1,0 +1,27 @@
+response = sdk.createPaymentMethodFromPayment(params)
+
+response.psp_ResponseCod
+response.psp_ResponseMsg
+response.psp_MerchantId
+
+pspPaymentMethod = response.psp_PaymentMethod
+pspPaymentMethod.PaymentMethodId
+pspPaymentMethod.PaymentMethodTag
+pspPaymentMethod.Product
+
+cardOutputDetails = pspPaymentMethod.CardOutputDetails
+cardOutputDetails.ExpirationDate
+cardOutputDetails.ExpirationYear
+cardOutputDetails.ExpirationMonth
+cardOutputDetails.IIN
+cardOutputDetails.Last4
+cardOutputDetails.NumberLength
+cardOutputDetails.MaskedNumber
+cardOutputDetails.MaskedNumberAlternative
+
+pspPaymentMethod.FingerPrint
+pspPaymentMethod.CreatedAt
+pspPaymentMethod.UpdatedAt
+
+response.psp_CustomerId
+response.psp_PosDateTime

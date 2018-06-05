@@ -1,0 +1,7 @@
+response = sdk.notifyFraudScreeningReview(params)
+
+response.psp_ResponseCod
+response.psp_ResponseMsg
+response.psp_ResponseExtended
+response.psp_MerchantId
+response.psp_PosDateTime

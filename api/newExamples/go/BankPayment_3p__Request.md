@@ -1,0 +1,41 @@
+package main
+
+import (
+        "fmt"
+        "log"
+        "npsSdk"
+        CONSTANTS "npsSdk/constants"
+)
+
+service:= nps.NewPaymentServicePlatformPortType(true)
+
+BankPayment3p := nps.NewRequerimientoStruct_BankPayment_3p()
+
+BankPayment3p.Psp_Version = "2.2"
+BankPayment3p.Psp_MerchantId = "sdk_test"
+BankPayment3p.Psp_TxSource = "WEB"
+BankPayment3p.Psp_MerchTxRef = "ORDER66666-3"
+BankPayment3p.Psp_MerchOrderId = "ORDER66666"
+BankPayment3p.Psp_ReturnURL = "http://localhost/"
+BankPayment3p.Psp_FrmLanguage = "es_AR"
+BankPayment3p.Psp_ScreenDescription = "Descripcion"
+BankPayment3p.Psp_TicketDescription = "Descripcion"
+BankPayment3p.Psp_Currency = "032"
+BankPayment3p.Psp_Country = "ARG"
+BankPayment3p.Psp_Product = "320"
+BankPayment3p.Psp_ExpDate1 = "2019-12-01"
+BankPayment3p.Psp_Amount1 = "15050"
+BankPayment3p.Psp_ExpMark = "0"
+BankPayment3p.Psp_ExpTime = "14:00:00"
+BankPayment3p.Psp_PosDateTime = "2019-12-01 12:00:00"
+
+response, err := service.BankPayment_3p(BankPayment3p)
+
+if err != nil {
+    fmt.Printf("Error: = [%s]", err)
+}
+fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
+fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
+
+
+

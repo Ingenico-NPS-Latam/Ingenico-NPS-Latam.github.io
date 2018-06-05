@@ -1,0 +1,21 @@
+response = sdk.query_card_details(params)
+
+response.get('psp_ResponseCod')
+response.get('psp_ResponseMsg')
+response.get('psp_MerchantId')
+response.get('psp_QueryCriteria')
+response.get('psp_QueryCriteriaId')
+response.get('psp_PosDateTime')
+
+pspCardOutputDetails = response.get('psp_CardOutputDetails')
+pspCardOutputDetails.get('Number')
+pspCardOutputDetails.get('ExpirationDate')
+pspCardOutputDetails.get('ExpirationYear')
+pspCardOutputDetails.get('ExpirationMonth')
+pspCardOutputDetails.get('HolderName')
+pspCardOutputDetails.get('IIN')
+pspCardOutputDetails.get('Last4')
+pspCardOutputDetails.get('NumberLength')
+pspCardOutputDetails.get('MaskedNumber')
+pspCardOutputDetails.get('MaskedNumberAlternative')
+

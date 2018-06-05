@@ -1,0 +1,18 @@
+
+response = nps.pay_online_3p(payonline3p)
+
+print(response.psp_ResponseCod)
+print(response.psp_ResponseMsg)
+print(response.psp_TransactionId)
+print(response.psp_Session3p)
+print(response.psp_FrontPSP_URL)
+print(response.psp_MerchantId)
+print(response.psp_MerchTxRef)
+print(response.psp_MerchOrderId)
+print(response.psp_Amount)
+print(response.psp_NumPayments)
+print(response.psp_Currency)
+print(response.psp_Country)
+print(response.psp_Product)
+print(response.psp_PosDateTime)
+print(response.psp_CreatedAt)

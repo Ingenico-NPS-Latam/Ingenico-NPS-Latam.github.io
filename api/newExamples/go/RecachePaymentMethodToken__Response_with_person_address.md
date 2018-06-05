@@ -1,0 +1,45 @@
+response, err := service.RecachePaymentMethodToken(recachePaymentMethodToken)
+
+fmt.Printf(response.Psp_ResponseCod)
+fmt.Printf(response.Psp_ResponseMsg)
+fmt.Printf(response.Psp_MerchantId)
+fmt.Printf(response.Psp_PaymentMethodToken)
+fmt.Printf(response.Psp_Product)
+
+pspCardOutputDetails := response.Psp_CardOutputDetails
+fmt.Printf(pspCardOutputDetails.ExpirationDate)
+fmt.Printf(pspCardOutputDetails.ExpirationYear)
+fmt.Printf(pspCardOutputDetails.ExpirationMonth)
+fmt.Printf(pspCardOutputDetails.HolderName)
+fmt.Printf(pspCardOutputDetails.IIN)
+fmt.Printf(pspCardOutputDetails.Last4)
+fmt.Printf(pspCardOutputDetails.NumberLength)
+fmt.Printf(pspCardOutputDetails.MaskedNumber)
+fmt.Printf(pspCardOutputDetails.MaskedNumberAlternative)
+
+
+pspPerson := response.Psp_Person
+fmt.Printf(pspPerson.FirstName)
+fmt.Printf(pspPerson.LastName)
+fmt.Printf(pspPerson.MiddleName)
+fmt.Printf(pspPerson.PhoneNumber1)
+fmt.Printf(pspPerson.PhoneNumber2)
+fmt.Printf(pspPerson.Gender)
+fmt.Printf(pspPerson.DateOfBirth)
+fmt.Printf(pspPerson.Nationality)
+fmt.Printf(pspPerson.IDNumber)
+fmt.Printf(pspPerson.IDType)
+
+
+pspAddress := response.Psp_Address
+fmt.Printf(pspAddress.Street)
+fmt.Printf(pspAddress.HouseNumber)
+fmt.Printf(pspAddress.AdditionalInfo)
+fmt.Printf(pspAddress.City)
+fmt.Printf(pspAddress.StateProvince)
+fmt.Printf(pspAddress.Country)
+fmt.Printf(pspAddress.ZipCode)
+
+fmt.Printf(response.Psp_AlreadyUsed)
+fmt.Printf(response.Psp_CreatedAt)
+fmt.Printf(response.Psp_UpdatedAt)

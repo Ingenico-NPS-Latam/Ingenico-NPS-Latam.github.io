@@ -1,0 +1,11 @@
+response = sdk.retrieve_customer(params)
+
+response.get('psp_ResponseCod')
+response.get('psp_ResponseMsg')
+response.get('psp_MerchantId')
+response.get('psp_CustomerId')
+response.get('psp_EmailAddress')
+response.get('psp_AlternativeEmailAddress')
+response.get('psp_AccountID')
+response.get('psp_AccountCreatedAt')
+response.get('psp_PosDateTime')

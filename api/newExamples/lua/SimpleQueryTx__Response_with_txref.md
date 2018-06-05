@@ -1,0 +1,55 @@
+
+response = nps.simple_query_tx(simplequerytx)
+
+print(response.psp_ResponseCod)
+print(response.psp_ResponseMsg)
+print(response.psp_MerchantId)
+print(response.psp_QueryCriteria)
+print(response.psp_QueryCriteriaId)
+print(response.psp_PosDateTime)
+
+local pspTransaction = response.psp_Transaction
+print(pspTransaction.psp_ResponseCod)
+print(pspTransaction.psp_ResponseMsg)
+print(pspTransaction.psp_ResponseExtended)
+print(pspTransaction.psp_TransactionId)
+print(pspTransaction.psp_MerchantId)
+print(pspTransaction.psp_TxSource)
+print(pspTransaction.psp_Operation)
+print(pspTransaction.psp_MerchTxRef)
+print(pspTransaction.psp_MerchOrderId)
+print(pspTransaction.psp_Amount)
+print(pspTransaction.psp_NumPayments)
+print(pspTransaction.psp_Currency)
+print(pspTransaction.psp_Country)
+print(pspTransaction.psp_Product)
+print(pspTransaction.psp_AuthorizationCode)
+print(pspTransaction.psp_BatchNro)
+print(pspTransaction.psp_TicketNumber)
+print(pspTransaction.psp_CardNumber_FSD)
+print(pspTransaction.psp_CardNumber_LFD)
+print(pspTransaction.psp_CardMask)
+print(pspTransaction.psp_ClExternalMerchant)
+print(pspTransaction.psp_ClExternalTerminal)
+print(pspTransaction.psp_ClResponseCod)
+print(pspTransaction.psp_ClResponseMsg)
+print(pspTransaction.psp_PosDateTime)
+print(pspTransaction.psp_CreatedAt)
+
+local pspFraudScreeningResult = psp_Transaction.psp_FraudScreeningResult
+print(pspFraudScreeningResult.ResultCode)
+print(pspFraudScreeningResult.ResultDescription)
+
+
+local pspVerificationServicesResult = psp_Transaction.psp_VerificationServicesResult
+print(pspVerificationServicesResult.ResultCodeCardSecurityCode)
+print(pspVerificationServicesResult.ResultCodeBillingAddress)
+print(pspVerificationServicesResult.ResultCodeBillingAddressZipCode)
+print(pspVerificationServicesResult.ResultCodeBillingPersonIDType)
+print(pspVerificationServicesResult.ResultCodeBillingPersonIDNumber)
+print(pspVerificationServicesResult.ResultCodeBillingPersonDateOfBirth)
+print(pspVerificationServicesResult.ResultCodeBillingPersonName)
+print(pspVerificationServicesResult.ResultCodeBillingPersonPhoneNumber1)
+print(pspVerificationServicesResult.ResultCodeCustomerEmailAddress)
+
+

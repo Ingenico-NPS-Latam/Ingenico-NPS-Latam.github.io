@@ -1,0 +1,22 @@
+response, err := service.CreatePaymentMethodToken(createPaymentMethodToken)
+
+fmt.Printf(response.Psp_ResponseCod)
+fmt.Printf(response.Psp_ResponseMsg)
+fmt.Printf(response.Psp_MerchantId)
+fmt.Printf(response.Psp_PaymentMethodToken)
+fmt.Printf(response.Psp_Product)
+
+pspCardOutputDetails := response.Psp_CardOutputDetails
+fmt.Printf(pspCardOutputDetails.ExpirationDate)
+fmt.Printf(pspCardOutputDetails.ExpirationYear)
+fmt.Printf(pspCardOutputDetails.ExpirationMonth)
+fmt.Printf(pspCardOutputDetails.HolderName)
+fmt.Printf(pspCardOutputDetails.IIN)
+fmt.Printf(pspCardOutputDetails.Last4)
+fmt.Printf(pspCardOutputDetails.NumberLength)
+fmt.Printf(pspCardOutputDetails.MaskedNumber)
+fmt.Printf(pspCardOutputDetails.MaskedNumberAlternative)
+
+fmt.Printf(response.Psp_AlreadyUsed)
+fmt.Printf(response.Psp_CreatedAt)
+fmt.Printf(response.Psp_UpdatedAt)
