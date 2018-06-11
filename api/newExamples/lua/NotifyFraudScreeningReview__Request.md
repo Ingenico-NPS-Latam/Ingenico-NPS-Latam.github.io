@@ -12,6 +12,6 @@ notifyfraudscreeningreview.psp_CriteriaId = "ORDER69461-3"
 notifyfraudscreeningreview.psp_ReviewResult = "A"
 notifyfraudscreeningreview.psp_PosDateTime = "2019-12-01 12:00:00"
 
-resp = nps.notify_fraud_screening_review(notifyfraudscreeningreview)
+response = nps.notify_fraud_screening_review(notifyfraudscreeningreview)
 
 print(resp.psp_ResponseCod)

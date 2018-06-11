@@ -18,7 +18,7 @@ NotifyFraudScreeningReview.Psp_CriteriaId = "ORDER69461-3"
 NotifyFraudScreeningReview.Psp_ReviewResult = "A"
 NotifyFraudScreeningReview.Psp_PosDateTime = "2019-12-01 12:00:00"
 
-resp, err := service.NotifyFraudScreeningReview(NotifyFraudScreeningReview)
+response, err := service.NotifyFraudScreeningReview(NotifyFraudScreeningReview)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)

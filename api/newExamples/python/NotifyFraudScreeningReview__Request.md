@@ -16,7 +16,7 @@ params = {
 }
 
 try: 
-    resp = sdk.notify_fraud_screening_review(params) 
+    response = sdk.notify_fraud_screening_review(params) 
 except ApiException: 
     # Code to handle error 
     pass 

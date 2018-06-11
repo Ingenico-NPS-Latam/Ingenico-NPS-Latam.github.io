@@ -16,7 +16,7 @@ params = {
 }
 
 begin 
-    resp = npssdk.notify_fraud_screening_review(params) 
+    response = npssdk.notify_fraud_screening_review(params) 
 rescue => e 
     puts e.message 
 end 
