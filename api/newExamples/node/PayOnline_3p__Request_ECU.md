@@ -25,7 +25,7 @@ sdk.payOnline3p({
                 'TypeId': '700',
                 'Amount': '1200',
                 'Rate': '1200',
-                'BaseAmount': '100000'
+                'BaseAmount': '10000'
             },
             {
                 'TypeId': '701',

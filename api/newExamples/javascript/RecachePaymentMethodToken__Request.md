@@ -1,34 +1,46 @@
-<script>
+NPS.setMerchantId('sdk_test');
+NPS.setClientSession('YOUR_CLIENT_SESSION');
+
 PaymentMethodTokenParams = {
-      card: {
+    card: {
         payment_method_id: 'gXnsNd7hhfIzAd9PkRov1MJeEVGlSKe7',
         security_code: '123',
-      }, 
-      billing: { // optional
-        person: { // optional
-          firstname: 'John',  // mandatory
-          middlename: 'Jay', // optional
-          lastname: 'Smith', // optional
-          phonenumber1: '4123-1234', // optional
-          phonenumber2: '4123-1234', // optional
-          gender: 'M', // optional
-          birthday: '1987-01-01', // optional
-          nationality: 'ARG', // optional
-          idtype: '500', // optional
-          idnumber: '500' // optional
+    },
+    billing: {
+        person: {
+            firstname: 'John',
+            middlename: 'Jay',
+            lastname: 'Smith',
+            phonenumber1: '4123-1234',
+            phonenumber2: '4123-1234',
+            gender: 'M',
+            birthday: '1987-01-01',
+            nationality: 'ARG',
+            idtype: '500',
+            idnumber: '500'
         },
-        address: { // optional
-          street: 'Fakestreet', // mandatory
-          housenumber: '999', // mandatory
-          city: 'Fakecity', // mandatory
-          country: 'ARG', // mandatory
-          zip: '1234', // optional
-          state: 'Fakestate', // optional
-          addinfo: 'Fakeinfo', // optional
+        address: {
+            street: 'Fakestreet',
+            housenumber: '999',
+            city: 'Fakecity',
+            country: 'ARG',
+            zip: '1234',
+            state: 'Fakestate',
+            addinfo: 'Fakeinfo',
         }
-      }
     }
+}
+
+
+var npsSuccessResponseHandler;
+npsSuccessResponseHandler = function(paymentMethodToken) {
+  //Success code
+};
+
+var npsErrorResponseHandler;
+npsErrorResponseHandler = function(response) {
+  //Error handler code
 };
 
 NPS.paymentMethodToken.recache(PaymentMethodTokenParams, npsSuccessResponseHandler, npsErrorResponseHandler);
-</script>
+

@@ -37,7 +37,7 @@ try {
     Taxes1.add("TypeId", "700");
     Taxes1.add("Amount", "1200");
     Taxes1.add("Rate", "1200");
-    Taxes1.add("BaseAmount", "100000");
+    Taxes1.add("BaseAmount", "10000");
 
     Taxes.add(Taxes1);
 
@@ -68,7 +68,7 @@ try {
     Taxes1.add("TypeId", "700");
     Taxes1.add("Amount", "1200");
     Taxes1.add("Rate", "1200");
-    Taxes1.add("BaseAmount", "100000");
+    Taxes1.add("BaseAmount", "10000");
 
     Taxes.add(Taxes1);
 

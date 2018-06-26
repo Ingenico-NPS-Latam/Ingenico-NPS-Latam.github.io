@@ -34,7 +34,7 @@ try{
     Taxes1.Add("TypeId", "700");
     Taxes1.Add("Amount", "1200");
     Taxes1.Add("Rate", "1200");
-    Taxes1.Add("BaseAmount", "100000");
+    Taxes1.Add("BaseAmount", "10000");
 
     Taxes.Add(Taxes1);
 
@@ -65,7 +65,7 @@ try{
     Taxes1.Add("TypeId", "700");
     Taxes1.Add("Amount", "1200");
     Taxes1.Add("Rate", "1200");
-    Taxes1.Add("BaseAmount", "100000");
+    Taxes1.Add("BaseAmount", "10000");
 
     Taxes.Add(Taxes1);
 

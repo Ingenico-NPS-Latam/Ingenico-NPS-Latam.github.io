@@ -27,7 +27,7 @@ $params = array(
                 'TypeId' => '700',
                 'Amount' => '1200',
                 'Rate' => '1200',
-                'BaseAmount' => '100000'
+                'BaseAmount' => '10000'
             ),
             array(
                 'TypeId' => '701',

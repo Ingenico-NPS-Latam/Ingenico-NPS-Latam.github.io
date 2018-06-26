@@ -34,7 +34,7 @@ Taxes1 = {}
 Taxes1.TypeId = "700"
 Taxes1.Amount = "1200"
 Taxes1.Rate = "1200"
-Taxes1.BaseAmount = "100000"
+Taxes1.BaseAmount = "10000"
 
 Taxes[#Taxes+1] = Taxes1
 
@@ -65,7 +65,7 @@ Taxes1 = {}
 Taxes1.TypeId = "700"
 Taxes1.Amount = "1200"
 Taxes1.Rate = "1200"
-Taxes1.BaseAmount = "100000"
+Taxes1.BaseAmount = "10000"
 
 Taxes[#Taxes+1] = Taxes1
 
