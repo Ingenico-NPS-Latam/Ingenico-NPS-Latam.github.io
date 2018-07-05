@@ -1,5 +1,5 @@
-nps.getProduct("424242",
-    methodResponse:{( methodResponse: NpsGetIProductResponse?, error: Error?) -> Void in
+nps.getIIDetails("424242",
+    methodResponse:{( methodResponse: NpsGetIINDetailsResponse?, error: Error?) -> Void in
         if error == nil{
             print(methodResponse?.responseCod as Any)
             print(methodResponse?.responseMsg as Any)

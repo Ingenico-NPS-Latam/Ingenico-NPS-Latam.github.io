@@ -1,0 +1,14 @@
+ComplexElement pspCustomerAdditionalDetails = new ComplexElement();
+pspCustomerAdditionalDetails.Add("EmailAddress", "jdoe@email.com");
+                                                                        pspCustomerAdditionalDetails.Add("AlternativeEmailAddress", "Jdoe79@email.com");
+                                                                        pspCustomerAdditionalDetails.Add("IPAddress", "192.168.158.190");
+                                                                        pspCustomerAdditionalDetails.Add("AccountID", "Jdoe78");
+                                                                        pspCustomerAdditionalDetails.Add("AccountCreatedAt", "2010-10-23");
+                                                                        pspCustomerAdditionalDetails.Add("AccountPreviousActivity", "1");
+                                                                        pspCustomerAdditionalDetails.Add("AccountHasCredentials", "1");
+                                                                        pspCustomerAdditionalDetails.Add("DeviceType", "1");
+                                                                        pspCustomerAdditionalDetails.Add("DeviceFingerPrint", "KJhKHKJgh7777kgh...");
+                                                                        pspCustomerAdditionalDetails.Add("BrowserLanguage", "ES");
+                                                                        pspCustomerAdditionalDetails.Add("HttpUserAgent", "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:21.0) Gecko/20100101 Firefox/21.0");
+                                                                        
+                                                                        data.Add("psp_CustomerAdditionalDetails", pspCustomerAdditionalDetails);
