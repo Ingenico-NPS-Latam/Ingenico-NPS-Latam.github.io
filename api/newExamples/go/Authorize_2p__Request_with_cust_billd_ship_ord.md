@@ -125,9 +125,9 @@ Authorize2p.psp_ShippingDetails = pspShippingDetails
 
 pspOrderDetails := nps.NewOrderDetailsStruct()
 
-ComplexElementArray OrderItems = new ComplexElementArray();
+OrderItems := nps.NewOrderItemsStruct()
 
-ComplexElementArrayItem OrderItems1 = new ComplexElementArrayItem();
+OrderItems1 := OrderItems.Items[1];
 OrderItems1.Quantity = "10"
 OrderItems1.UnitPrice = "10050"
 OrderItems1.Description = "Blue pencil"
@@ -136,7 +136,6 @@ OrderItems1.SkuCode = "SO-4587885545"
 OrderItems1.ManufacturerPartNumber = "CN-0N2828421-3AD-02CD"
 OrderItems1.Risk = "H"
 
-OrderItems.add(OrderItems1);
 
 pspOrderDetails.OrderItems = OrderItems
 

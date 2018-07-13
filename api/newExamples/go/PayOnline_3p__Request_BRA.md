@@ -29,13 +29,12 @@ pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
 pspAmountAdditionalDetails.Tip = "20"
 pspAmountAdditionalDetails.Discount = "1"
 
-ComplexElementArray Taxes = new ComplexElementArray();
+Taxes := nps.NewTaxesStruct()
 
-ComplexElementArrayItem Taxes1 = new ComplexElementArrayItem();
+Taxes1 := Taxes.Items[1];
 Taxes1.TypeId = "100"
 Taxes1.Amount = "200000"
 
-Taxes.add(Taxes1);
 
 pspAmountAdditionalDetails.Taxes = Taxes
 

@@ -23,9 +23,9 @@ SplitPayOnLine3p.Psp_Country = "ECU"
 SplitPayOnLine3p.Psp_Product = "14"
 SplitPayOnLine3p.Psp_PosDateTime = "2019-12-01 12:00:00"
 
-ComplexElementArray pspTransactions = new ComplexElementArray();
+pspTransactions := nps.NewTransactionsStruct()
 
-ComplexElementArrayItem pspTransactions1 = new ComplexElementArrayItem();
+pspTransactions1 := pspTransactions.Items[1];
 pspTransactions1.Psp_MerchantId = "psp_test"
 pspTransactions1.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions1.Psp_Product = "14"
@@ -34,29 +34,24 @@ pspTransactions1.Psp_NumPayments = "1"
 
 pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
 
-ComplexElementArray Taxes = new ComplexElementArray();
+Taxes := nps.NewTaxesStruct()
 
-ComplexElementArrayItem Taxes1 = new ComplexElementArrayItem();
+Taxes1 := Taxes.Items[1];
 Taxes1.TypeId = "700"
 Taxes1.Amount = "1200"
 Taxes1.Rate = "1200"
 Taxes1.BaseAmount = "10000"
 
-Taxes.add(Taxes1);
-
-ComplexElementArrayItem Taxes2 = new ComplexElementArrayItem();
+Taxes2 := Taxes.Items[2];
 Taxes2.TypeId = "701"
 Taxes2.BaseAmount = "20000"
 
-Taxes.add(Taxes2);
 
 pspAmountAdditionalDetails.Taxes = Taxes
 
 pspTransactions1.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
-pspTransactions.add(pspTransactions1);
-
-ComplexElementArrayItem pspTransactions2 = new ComplexElementArrayItem();
+pspTransactions2 := pspTransactions.Items[2];
 pspTransactions2.Psp_MerchantId = "psp_test"
 pspTransactions2.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions2.Psp_Product = "14"
@@ -65,27 +60,23 @@ pspTransactions2.Psp_NumPayments = "1"
 
 pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
 
-ComplexElementArray Taxes = new ComplexElementArray();
+Taxes := nps.NewTaxesStruct()
 
-ComplexElementArrayItem Taxes1 = new ComplexElementArrayItem();
+Taxes1 := Taxes.Items[1];
 Taxes1.TypeId = "700"
 Taxes1.Amount = "1200"
 Taxes1.Rate = "1200"
 Taxes1.BaseAmount = "10000"
 
-Taxes.add(Taxes1);
-
-ComplexElementArrayItem Taxes2 = new ComplexElementArrayItem();
+Taxes2 := Taxes.Items[2];
 Taxes2.TypeId = "701"
 Taxes2.BaseAmount = "20000"
 
-Taxes.add(Taxes2);
 
 pspAmountAdditionalDetails.Taxes = Taxes
 
 pspTransactions2.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
-pspTransactions.add(pspTransactions2);
 
 SplitPayOnLine3p.psp_Transactions = pspTransactions
 

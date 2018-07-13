@@ -19,29 +19,26 @@ PayOnLine2p.Psp_MerchOrderId = "ORDERX1466Xz"
 PayOnLine2p.Psp_NumPayments = "1"
 PayOnLine2p.Psp_Currency = "840"
 PayOnLine2p.Psp_Country = "ECU"
-PayOnLine2p.Psp_Product = "5"
-PayOnLine2p.Psp_CardNumber = "5189680000495961"
-PayOnLine2p.Psp_CardExpDate = "3311"
-PayOnLine2p.Psp_PosDateTime = "2019-12-01 12:00:00"
+PayOnLine2p.Psp_Product = "1"
+PayOnLine2p.Psp_CardNumber = "376650002408696"
+PayOnLine2p.Psp_CardExpDate = "1808"
+PayOnLine2p.Psp_PosDateTime = "2018-07-05 12:00:00"
 PayOnLine2p.Psp_Amount = "31200"
 
 pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
 
-ComplexElementArray Taxes = new ComplexElementArray();
+Taxes := nps.NewTaxesStruct()
 
-ComplexElementArrayItem Taxes1 = new ComplexElementArrayItem();
+Taxes1 := Taxes.Items[1];
 Taxes1.TypeId = "700"
 Taxes1.Amount = "1200"
 Taxes1.Rate = "1200"
 Taxes1.BaseAmount = "10000"
 
-Taxes.add(Taxes1);
-
-ComplexElementArrayItem Taxes2 = new ComplexElementArrayItem();
+Taxes2 := Taxes.Items[2];
 Taxes2.TypeId = "701"
 Taxes2.BaseAmount = "20000"
 
-Taxes.add(Taxes2);
 
 pspAmountAdditionalDetails.Taxes = Taxes
 

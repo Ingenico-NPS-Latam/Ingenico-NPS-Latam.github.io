@@ -30,9 +30,9 @@ pspBillingDetails.InvoiceCurrency = "858"
 
 SplitAuthorize3p.psp_BillingDetails = pspBillingDetails
 
-ComplexElementArray pspTransactions = new ComplexElementArray();
+pspTransactions := nps.NewTransactionsStruct()
 
-ComplexElementArrayItem pspTransactions1 = new ComplexElementArrayItem();
+pspTransactions1 := pspTransactions.Items[1];
 pspTransactions1.Psp_MerchantId = "sdk_test"
 pspTransactions1.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions1.Psp_Product = "5"
@@ -43,23 +43,20 @@ pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
 pspAmountAdditionalDetails.Tip = "20"
 pspAmountAdditionalDetails.Discount = "1"
 
-ComplexElementArray Taxes = new ComplexElementArray();
+Taxes := nps.NewTaxesStruct()
 
-ComplexElementArrayItem Taxes1 = new ComplexElementArrayItem();
+Taxes1 := Taxes.Items[1];
 Taxes1.TypeId = "601"
 Taxes1.Amount = "220000"
 Taxes1.Rate = "2200"
 Taxes1.BaseAmount = "1000000"
 
-Taxes.add(Taxes1);
 
 pspAmountAdditionalDetails.Taxes = Taxes
 
 pspTransactions1.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
-pspTransactions.add(pspTransactions1);
-
-ComplexElementArrayItem pspTransactions2 = new ComplexElementArrayItem();
+pspTransactions2 := pspTransactions.Items[2];
 pspTransactions2.Psp_MerchantId = "sdk_test"
 pspTransactions2.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions2.Psp_Product = "5"
@@ -70,21 +67,19 @@ pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
 pspAmountAdditionalDetails.Tip = "20"
 pspAmountAdditionalDetails.Discount = "1"
 
-ComplexElementArray Taxes = new ComplexElementArray();
+Taxes := nps.NewTaxesStruct()
 
-ComplexElementArrayItem Taxes1 = new ComplexElementArrayItem();
+Taxes1 := Taxes.Items[1];
 Taxes1.TypeId = "601"
 Taxes1.Amount = "220000"
 Taxes1.Rate = "2200"
 Taxes1.BaseAmount = "1000000"
 
-Taxes.add(Taxes1);
 
 pspAmountAdditionalDetails.Taxes = Taxes
 
 pspTransactions2.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
-pspTransactions.add(pspTransactions2);
 
 SplitAuthorize3p.psp_Transactions = pspTransactions
 

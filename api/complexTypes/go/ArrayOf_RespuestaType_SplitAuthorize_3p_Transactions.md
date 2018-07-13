@@ -1,0 +1,12 @@
+ArraySplitAuthorize3pTransactions := nps.NewArraySplitAuthorize3pTransactionsStruct()
+ArraySplitAuthorize3pTransactions.Psp_MerchantId = "sdk_test"
+ArraySplitAuthorize3pTransactions.Psp_TransactionId = "100022"
+ArraySplitAuthorize3pTransactions.Psp_MerchTxRef = "ORDER1000-1"
+ArraySplitAuthorize3pTransactions.Psp_MerchAdditionalRef = "ADDITIONAL-REF1234"
+ArraySplitAuthorize3pTransactions.Psp_Product = "14"
+ArraySplitAuthorize3pTransactions.Psp_PromotionCode = "VISA SANTANDER"
+ArraySplitAuthorize3pTransactions.Psp_Amount = "15050"
+ArraySplitAuthorize3pTransactions.Psp_NumPayments = "1"
+ArraySplitAuthorize3pTransactions.Psp_FirstPaymentDeferral = "3"
+ArraySplitAuthorize3pTransactions.Psp_SoftDescriptor = "Compra Art 15"
+ArraySplitAuthorize3pTransactions.Psp_CreatedAt = "2008-01-12 13:05:35-03:00"

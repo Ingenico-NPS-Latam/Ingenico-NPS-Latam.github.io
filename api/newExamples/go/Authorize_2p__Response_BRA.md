@@ -16,10 +16,12 @@ fmt.Printf(response.Psp_CardNumber)
 fmt.Printf(response.Psp_CardExpDate)
 fmt.Printf(response.Psp_AuthorizationCode)
 fmt.Printf(response.Psp_SequenceNumber)
+fmt.Printf(response.Psp_ClTrnId)
 fmt.Printf(response.Psp_ClExternalMerchant)
 fmt.Printf(response.Psp_ClResponseCod)
 fmt.Printf(response.Psp_ClResponseMsg)
 fmt.Printf(response.Psp_PosDateTime)
+fmt.Printf(response.Psp_Plan)
 fmt.Printf(response.Psp_CreatedAt)
 
 pspAmountAdditionalDetails := response.Psp_AmountAdditionalDetails

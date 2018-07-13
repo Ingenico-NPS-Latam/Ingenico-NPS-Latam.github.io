@@ -1,0 +1,12 @@
+ArraySplitpayOnline3pTransactions := nps.NewArraySplitpayOnline3pTransactionsStruct()
+ArraySplitpayOnline3pTransactions.Psp_MerchantId = "sdk_test"
+ArraySplitpayOnline3pTransactions.Psp_TransactionId = "100022"
+ArraySplitpayOnline3pTransactions.Psp_MerchTxRef = "ORDER1000-1"
+ArraySplitpayOnline3pTransactions.Psp_MerchAdditionalRef = "ADDITIONAL-REF1234"
+ArraySplitpayOnline3pTransactions.Psp_Product = "14"
+ArraySplitpayOnline3pTransactions.Psp_PromotionCode = "VISA SANTANDER"
+ArraySplitpayOnline3pTransactions.Psp_Amount = "15050"
+ArraySplitpayOnline3pTransactions.Psp_NumPayments = "1"
+ArraySplitpayOnline3pTransactions.Psp_Plan = "PlanZ"
+ArraySplitpayOnline3pTransactions.Psp_SoftDescriptor = "Compra Art 15"
+ArraySplitpayOnline3pTransactions.Psp_CreatedAt = "2008-01-12 13:05:35-03:00"

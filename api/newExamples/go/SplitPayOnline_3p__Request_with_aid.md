@@ -23,34 +23,31 @@ SplitPayOnLine3p.Psp_Country = "ARG"
 SplitPayOnLine3p.Psp_Product = "14"
 SplitPayOnLine3p.Psp_PosDateTime = "2019-12-01 12:00:00"
 
-ComplexElementArray pspTransactions = new ComplexElementArray();
+pspTransactions := nps.NewTransactionsStruct()
 
-ComplexElementArrayItem pspTransactions1 = new ComplexElementArrayItem();
+pspTransactions1 := pspTransactions.Items[1];
 pspTransactions1.Psp_MerchantId = "sdk_test"
 pspTransactions1.Psp_MerchTxRef = "ORDER66666-10"
 pspTransactions1.Psp_Product = "14"
 pspTransactions1.Psp_Amount = "10000"
 pspTransactions1.Psp_NumPayments = "1"
 
-pspTransactions.add(pspTransactions1);
-
-ComplexElementArrayItem pspTransactions2 = new ComplexElementArrayItem();
+pspTransactions2 := pspTransactions.Items[2];
 pspTransactions2.Psp_MerchantId = "sdk_test"
 pspTransactions2.Psp_MerchTxRef = "ORDER66666-11"
 pspTransactions2.Psp_Product = "14"
 pspTransactions2.Psp_Amount = "5050"
 pspTransactions2.Psp_NumPayments = "1"
 
-pspTransactions.add(pspTransactions2);
 
 SplitPayOnLine3p.psp_Transactions = pspTransactions
 
 pspAirlineDetails := nps.NewAirlineDetailsStruct()
 pspAirlineDetails.PNR = "154DDD54DWW11"
 
-ComplexElementArray Passengers = new ComplexElementArray();
+Passengers := nps.NewPassengersStruct()
 
-ComplexElementArrayItem Passengers1 = new ComplexElementArrayItem();
+Passengers1 := Passengers.Items[1];
 Passengers1.FirstName = "John"
 Passengers1.LastName = "Doe"
 Passengers1.MiddleName = "Michael"
@@ -63,7 +60,6 @@ Passengers1.IDCountry = "ARG"
 Passengers1.LoyaltyNumber = "254587547"
 Passengers1.LoyaltyTier = "1"
 
-Passengers.add(Passengers1);
 
 pspAirlineDetails.Passengers = Passengers
 

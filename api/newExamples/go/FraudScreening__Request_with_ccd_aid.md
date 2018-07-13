@@ -76,9 +76,9 @@ FraudScreening.psp_BillingDetails = pspBillingDetails
 pspAirlineDetails := nps.NewAirlineDetailsStruct()
 pspAirlineDetails.PNR = "154DDD54DWW11"
 
-ComplexElementArray Legs = new ComplexElementArray();
+Legs := nps.NewLegsStruct()
 
-ComplexElementArrayItem Legs1 = new ComplexElementArrayItem();
+Legs1 := Legs.Items[1];
 Legs1.DepartureAirport = "EZE"
 Legs1.DepartureDatetime = "2014-05-12 13:05:00"
 Legs1.DepartureAirportTimezone = "-03:00"
@@ -90,13 +90,12 @@ Legs1.FareClassCode = "FR"
 Legs1.BaseFare = "30000"
 Legs1.BaseFareCurrency = "032"
 
-Legs.add(Legs1);
 
 pspAirlineDetails.Legs = Legs
 
-ComplexElementArray Passengers = new ComplexElementArray();
+Passengers := nps.NewPassengersStruct()
 
-ComplexElementArrayItem Passengers1 = new ComplexElementArrayItem();
+Passengers1 := Passengers.Items[1];
 Passengers1.FirstName = "John"
 Passengers1.LastName = "Doe"
 Passengers1.MiddleName = "Michael"
@@ -109,7 +108,6 @@ Passengers1.IDCountry = "ARG"
 Passengers1.LoyaltyNumber = "254587547"
 Passengers1.LoyaltyTier = "1"
 
-Passengers.add(Passengers1);
 
 pspAirlineDetails.Passengers = Passengers
 
