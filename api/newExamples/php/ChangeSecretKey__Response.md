@@ -1,4 +1,4 @@
-$response = sdk.changeSecretKey($params)
+$response = sdk.changeSecretKey($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

@@ -14,7 +14,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->createClientSession($params) 
+    $response = $sdk->createClientSession($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

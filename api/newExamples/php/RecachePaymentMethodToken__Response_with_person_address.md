@@ -1,4 +1,4 @@
-$response = sdk.recachePaymentMethodToken($params)
+$response = sdk.recachePaymentMethodToken($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

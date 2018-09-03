@@ -1,4 +1,4 @@
-$response = sdk.createCustomer($params)
+$response = sdk.createCustomer($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

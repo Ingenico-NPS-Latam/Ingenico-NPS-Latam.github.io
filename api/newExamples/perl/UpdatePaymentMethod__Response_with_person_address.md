@@ -1,4 +1,4 @@
-use NpsPerlSDK::Nps;
+use NpsSDK::Nps;
 use warnings;
 use strict;
 

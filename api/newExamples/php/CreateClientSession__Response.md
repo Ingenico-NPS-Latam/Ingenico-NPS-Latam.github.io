@@ -1,4 +1,4 @@
-$response = sdk.createClientSession($params)
+$response = sdk.createClientSession($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

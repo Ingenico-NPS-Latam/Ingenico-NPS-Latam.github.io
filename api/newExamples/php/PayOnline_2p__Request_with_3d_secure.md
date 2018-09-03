@@ -29,7 +29,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->payOnline2p($params) 
+    $response = $sdk->payOnline2p($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

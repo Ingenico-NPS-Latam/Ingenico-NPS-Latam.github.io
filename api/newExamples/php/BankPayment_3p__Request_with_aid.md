@@ -76,7 +76,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->bankPayment3p($params) 
+    $response = $sdk->bankPayment3p($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

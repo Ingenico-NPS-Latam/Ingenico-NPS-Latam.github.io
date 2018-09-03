@@ -15,7 +15,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->retrieveCustomer($params) 
+    $response = $sdk->retrieveCustomer($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

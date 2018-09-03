@@ -119,7 +119,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->authorize3p($params) 
+    $response = $sdk->authorize3p($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

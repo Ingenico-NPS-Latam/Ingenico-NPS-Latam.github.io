@@ -11,29 +11,7 @@ PaymentMethod paymentMethod = new PaymentMethod();
 paymentMethod.setId('51e0kuKSwkG3GlaGq2fQaNdBsfOY0EHY');
 paymentMethod.setCardSecurityCode("123");
 
-Billing billing = new Billing();
-
-billing.getPerson()
-          .setFirstName("John")
-          .setLastName("Smith")
-          .setDateOfBirth("1987-01-01")
-          .setGender("M")
-          .setNationality("ARG")
-          .setIdType(Billing.IDTYPE_AR_DNI)
-          .setIdNumber("32123123")
-          .setPhoneNumber1("4123-1234")
-          .setPhoneNumber2("4123-5678");
-
-billing.getAddress()
-          .setAdditionalInfo("adding additional info")
-          .setCity("Capital Federal")
-          .setStateProvince("Capital Federal")
-          .setCountry("ARG")
-          .setZipCode("1414")
-          .setStreet("Calle Falsa")
-          .setHouseNumber("123");
-
-nps.recachePaymentMethodToken(paymentMethod, billing, new Nps.ResponseHandler() {
+nps.recachePaymentMethodToken(paymentMethod, null, new Nps.ResponseHandler() {
         @Override
         public void onSuccess(PaymentMethodToken paymentMethodToken) {
             Log.d("Nps", "token success = " + paymentMethodToken.getId());

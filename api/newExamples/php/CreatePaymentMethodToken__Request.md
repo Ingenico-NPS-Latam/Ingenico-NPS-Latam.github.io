@@ -20,7 +20,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->createPaymentMethodToken($params) 
+    $response = $sdk->createPaymentMethodToken($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

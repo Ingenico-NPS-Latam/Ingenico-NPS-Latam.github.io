@@ -25,7 +25,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->authorize2p($params) 
+    $response = $sdk->authorize2p($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

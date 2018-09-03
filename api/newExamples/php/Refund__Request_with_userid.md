@@ -19,7 +19,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->refund($params) 
+    $response = $sdk->refund($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

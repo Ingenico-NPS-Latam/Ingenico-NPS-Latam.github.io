@@ -20,27 +20,6 @@ nps.recachePaymentMethodToken("kWRZGcAxy5D7MoB6BDACugHYrlFzP9Eg",
                         print(cardDetails.maskedNumber as Any)
                         print(cardDetails.maskedNumberAlternative as Any)
 
-                        let person = methodResponse?.person
-                        print(person.firstName as Any)
-                        print(person.lastName as Any)
-                        print(person.middleName as Any)
-                        print(person.phoneNumber1 as Any)
-                        print(person.phoneNumber2 as Any)
-                        print(person.gender as Any)
-                        print(person.dateOfBirth as Any)
-                        print(person.nationality as Any)
-                        print(person.idNumber as Any)
-                        print(person.idType as Any)
-
-                        let address = methodResponse?.address
-                        print(address.street as Any)
-                        print(address.houseNumber as Any)
-                        print(address.additionalInfo as Any)
-                        print(address.city as Any)
-                        print(address.stateProvince as Any)
-                        print(address.country as Any)
-                        print(address.zipCode as Any)
-
                         print(methodResponse?.alreadyUsed as Any)
                         print(methodResponse?.createdAt as Any)
                         print(methodResponse?.updateAt as Any)

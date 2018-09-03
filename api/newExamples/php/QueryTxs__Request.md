@@ -16,7 +16,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->queryTxs($params) 
+    $response = $sdk->queryTxs($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

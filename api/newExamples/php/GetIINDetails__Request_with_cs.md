@@ -16,7 +16,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->getIinDetails($params) 
+    $response = $sdk->getIinDetails($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

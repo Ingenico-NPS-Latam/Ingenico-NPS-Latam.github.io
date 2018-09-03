@@ -21,7 +21,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->getInstallmentsOptions($params) 
+    $response = $sdk->getInstallmentsOptions($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

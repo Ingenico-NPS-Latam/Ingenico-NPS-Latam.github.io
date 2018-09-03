@@ -1,9 +1,9 @@
-use NpsPerlSDK::Nps;
+use NpsSDK::Nps;
 use warnings;
 use strict;
 
-NpsPerlSDK::Configuration::configure( 
-    environment => $constants::SANDBOX_ENV,
+NpsSDK::Configuration::configure( 
+    environment => $NpsSDK::Constants::SANDBOX_ENV,
     secret_key => "_YOUR_SECRET_KEY_",
     sanitize => 1 
     );
@@ -123,4 +123,4 @@ my $params = {
     }
 };
 
-my $response = NpsPerlSDK::Nps::bank_payment_3p($params);
+my $response = NpsSDK::Nps::bank_payment_3p($params);

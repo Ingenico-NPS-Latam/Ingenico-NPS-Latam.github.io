@@ -1,4 +1,4 @@
-$response = sdk.authorize2p($params)
+$response = sdk.authorize2p($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];
@@ -12,6 +12,7 @@ $response["psp_NumPayments"];
 $response["psp_Currency"];
 $response["psp_Country"];
 $response["psp_Product"];
+$response["psp_CardExpDate"];
 $response["psp_AuthorizationCode"];
 $response["psp_BatchNro"];
 $response["psp_TicketNumber"];

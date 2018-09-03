@@ -1,4 +1,4 @@
-$response = sdk.splitPayOnline3p($params)
+$response = sdk.splitPayOnline3p($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

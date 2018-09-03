@@ -27,7 +27,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->updateCustomer($params) 
+    $response = $sdk->updateCustomer($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

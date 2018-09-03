@@ -68,7 +68,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->createCustomer($params) 
+    $response = $sdk->createCustomer($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

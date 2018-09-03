@@ -119,7 +119,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->cashPayment3p($params) 
+    $response = $sdk->cashPayment3p($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

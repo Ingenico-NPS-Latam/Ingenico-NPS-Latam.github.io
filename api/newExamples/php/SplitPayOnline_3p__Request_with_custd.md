@@ -41,7 +41,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->splitPayOnline3p($params) 
+    $response = $sdk->splitPayOnline3p($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

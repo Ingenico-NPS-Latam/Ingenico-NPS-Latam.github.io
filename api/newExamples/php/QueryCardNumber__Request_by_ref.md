@@ -16,7 +16,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->queryCardNumber($params) 
+    $response = $sdk->queryCardNumber($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

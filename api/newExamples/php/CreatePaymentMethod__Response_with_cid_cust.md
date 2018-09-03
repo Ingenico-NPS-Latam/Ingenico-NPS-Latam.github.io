@@ -1,4 +1,4 @@
-$response = sdk.createPaymentMethod($params)
+$response = sdk.createPaymentMethod($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

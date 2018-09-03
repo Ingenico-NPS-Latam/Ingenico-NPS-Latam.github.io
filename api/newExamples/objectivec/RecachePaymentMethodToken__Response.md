@@ -20,27 +20,6 @@
                         NSLog(@"%@", [cardDetails maskedNumber]);
                         NSLog(@"%@", [cardDetails maskedNumberAlternative]);
 
-                        NpsPerson *person = [methodResponse person]);
-                        NSLog(@"%@", [person firstName]);
-                        NSLog(@"%@", [person lastName]);
-                        NSLog(@"%@", [person middleName]);
-                        NSLog(@"%@", [person phoneNumber1]);
-                        NSLog(@"%@", [person phoneNumber2]);
-                        NSLog(@"%@", [person gender]);
-                        NSLog(@"%@", [person dateOfBirth]);
-                        NSLog(@"%@", [person nationality]);
-                        NSLog(@"%@", [person idNumber]);
-                        NSLog(@"%@", [person idType]);
-
-                        NpsPerson *address = [methodResponse address]);
-                        NSLog(@"%@", [address street]);
-                        NSLog(@"%@", [address houseNumber]);
-                        NSLog(@"%@", [address additionalInfo]);
-                        NSLog(@"%@", [address city]);
-                        NSLog(@"%@", [address stateProvince]);
-                        NSLog(@"%@", [address country]);
-                        NSLog(@"%@", [address zipCode]);
-
                         NSLog(@"%@", [methodResponse alreadyUsed]);
                         NSLog(@"%@", [methodResponse createdAt]);
                         NSLog(@"%@", [methodResponse updateAt]);

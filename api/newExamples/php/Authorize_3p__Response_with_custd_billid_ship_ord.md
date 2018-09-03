@@ -1,4 +1,4 @@
-$response = sdk.authorize3p($params)
+$response = sdk.authorize3p($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];
@@ -13,5 +13,6 @@ $response["psp_NumPayments"];
 $response["psp_Currency"];
 $response["psp_Country"];
 $response["psp_Product"];
+$response["psp_CustomerMail"];
 $response["psp_PosDateTime"];
 $response["psp_CreatedAt"];

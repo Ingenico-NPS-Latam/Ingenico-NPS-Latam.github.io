@@ -1,4 +1,4 @@
-use NpsPerlSDK::Nps;
+use NpsSDK::Nps;
 use warnings;
 use strict;
 
@@ -17,5 +17,6 @@ $response->{psp_NumPayments};
 $response->{psp_Currency};
 $response->{psp_Country};
 $response->{psp_Product};
+$response->{psp_CustomerMail};
 $response->{psp_PosDateTime};
 $response->{psp_CreatedAt};

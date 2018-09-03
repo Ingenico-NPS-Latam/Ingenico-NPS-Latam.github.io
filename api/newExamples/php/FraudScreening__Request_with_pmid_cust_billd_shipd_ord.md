@@ -120,7 +120,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->fraudScreening($params) 
+    $response = $sdk->fraudScreening($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

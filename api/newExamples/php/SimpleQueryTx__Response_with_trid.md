@@ -1,4 +1,4 @@
-$response = sdk.simpleQueryTx($params)
+$response = sdk.simpleQueryTx($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

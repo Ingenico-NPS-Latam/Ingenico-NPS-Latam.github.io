@@ -1,4 +1,4 @@
-use NpsPerlSDK::Nps;
+use NpsSDK::Nps;
 use warnings;
 use strict;
 
@@ -20,10 +20,12 @@ $response->{psp_CardNumber};
 $response->{psp_CardExpDate};
 $response->{psp_AuthorizationCode};
 $response->{psp_SequenceNumber};
+$response->{psp_ClTrnId};
 $response->{psp_ClExternalMerchant};
 $response->{psp_ClResponseCod};
 $response->{psp_ClResponseMsg};
 $response->{psp_PosDateTime};
+$response->{psp_Plan};
 $response->{psp_CreatedAt};
 
 my $pspAmountAdditionalDetails = $response->{psp_AmountAdditionalDetails};

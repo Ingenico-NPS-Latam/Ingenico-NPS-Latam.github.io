@@ -1,4 +1,4 @@
-$response = sdk.authorize3p($params)
+$response = sdk.authorize3p($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

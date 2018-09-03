@@ -1,4 +1,4 @@
-use NpsPerlSDK::Nps;
+use NpsSDK::Nps;
 use warnings;
 use strict;
 
@@ -21,6 +21,7 @@ $response->{psp_CardExpDate};
 $response->{psp_AuthorizationCode};
 $response->{psp_BatchNro};
 $response->{psp_TicketNumber};
+$response->{psp_CustomerMail};
 $response->{psp_ClExternalMerchant};
 $response->{psp_ClExternalTerminal};
 $response->{psp_ClResponseCod};

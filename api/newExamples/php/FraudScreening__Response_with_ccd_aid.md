@@ -1,4 +1,4 @@
-$response = sdk.fraudScreening($params)
+$response = sdk.fraudScreening($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

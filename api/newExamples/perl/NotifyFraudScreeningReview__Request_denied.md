@@ -1,9 +1,9 @@
-use NpsPerlSDK::Nps;
+use NpsSDK::Nps;
 use warnings;
 use strict;
 
-NpsPerlSDK::Configuration::configure( 
-    environment => $constants::SANDBOX_ENV,
+NpsSDK::Configuration::configure( 
+    environment => $NpsSDK::Constants::SANDBOX_ENV,
     secret_key => "_YOUR_SECRET_KEY_",
     sanitize => 1 
     );
@@ -17,4 +17,4 @@ my $params = {
     "psp_PosDateTime" => "2019-12-01 12:00:00",
 };
 
-my $response = NpsPerlSDK::Nps::notify_fraud_screening_review($params);
+my $response = NpsSDK::Nps::notify_fraud_screening_review($params);

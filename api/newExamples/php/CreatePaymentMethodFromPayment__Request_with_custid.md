@@ -18,7 +18,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->createPaymentMethodFromPayment($params) 
+    $response = $sdk->createPaymentMethodFromPayment($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

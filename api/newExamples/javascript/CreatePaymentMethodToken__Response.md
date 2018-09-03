@@ -7,26 +7,7 @@ npsSuccessResponseHandler = function (paymentMethodToken) {
     console.log(paymentMethodToken.product)
     console.log(paymentMethodToken.created_at)
     console.log(paymentMethodToken.updated_at)
-    
-    console.log(paymentMethodToken.billing.address.addinfo)
-    console.log(paymentMethodToken.billing.address.city)
-    console.log(paymentMethodToken.billing.address.country)
-    console.log(paymentMethodToken.billing.address.housenumber)
-    console.log(paymentMethodToken.billing.address.state)
-    console.log(paymentMethodToken.billing.address.street)
-    console.log(paymentMethodToken.billing.address.zip)
-    
-    console.log(paymentMethodToken.billing.person.birthday)
-    console.log(paymentMethodToken.billing.person.firstname)
-    console.log(paymentMethodToken.billing.person.gender)
-    console.log(paymentMethodToken.billing.person.idnumber)
-    console.log(paymentMethodToken.billing.person.idtype)
-    console.log(paymentMethodToken.billing.person.lastname)
-    console.log(paymentMethodToken.billing.person.middlename)
-    console.log(paymentMethodToken.billing.person.nationality)
-    console.log(paymentMethodToken.billing.person.phonenumber1)
-    console.log(paymentMethodToken.billing.person.phonenumber2)
-    
+ 
     console.log(paymentMethodToken.card.exp_date)
     console.log(paymentMethodToken.card.exp_month)
     console.log(paymentMethodToken.card.exp_year)

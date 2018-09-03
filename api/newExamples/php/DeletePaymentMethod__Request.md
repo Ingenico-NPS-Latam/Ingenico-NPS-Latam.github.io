@@ -15,7 +15,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->deletePaymentMethod($params) 
+    $response = $sdk->deletePaymentMethod($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

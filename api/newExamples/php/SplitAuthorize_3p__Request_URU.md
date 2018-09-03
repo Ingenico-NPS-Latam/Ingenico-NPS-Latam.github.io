@@ -67,7 +67,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->splitAuthorize3p($params) 
+    $response = $sdk->splitAuthorize3p($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

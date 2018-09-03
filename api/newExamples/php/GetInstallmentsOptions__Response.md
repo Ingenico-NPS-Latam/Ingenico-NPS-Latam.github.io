@@ -1,4 +1,4 @@
-$response = sdk.getInstallmentsOptions($params)
+$response = sdk.getInstallmentsOptions($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

@@ -1,4 +1,4 @@
-$response = sdk.deletePaymentMethod($params)
+$response = sdk.deletePaymentMethod($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

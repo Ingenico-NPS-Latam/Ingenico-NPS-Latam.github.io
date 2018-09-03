@@ -19,7 +19,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->updatePaymentMethod($params) 
+    $response = $sdk->updatePaymentMethod($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

@@ -1,4 +1,4 @@
-$response = sdk.capture($params)
+$response = sdk.capture($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

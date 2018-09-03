@@ -16,10 +16,10 @@ $params = array(
     'psp_NumPayments' => '1',
     'psp_Currency' => '840',
     'psp_Country' => 'ECU',
-    'psp_Product' => '5',
-    'psp_CardNumber' => '5189680000495961',
-    'psp_CardExpDate' => '3311',
-    'psp_PosDateTime' => '2019-12-01 12:00:00',
+    'psp_Product' => '14',
+    'psp_CardNumber' => '4551782304798240',
+    'psp_CardExpDate' => '2001',
+    'psp_PosDateTime' => '2018-07-05 12:00:00',
     'psp_Amount' => '31200',
     'psp_AmountAdditionalDetails' => array(
         'Taxes' => array(
@@ -38,7 +38,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->payOnline2p($params) 
+    $response = $sdk->payOnline2p($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

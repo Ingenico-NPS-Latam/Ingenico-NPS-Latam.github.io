@@ -17,7 +17,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->notifyFraudScreeningReview($params) 
+    $response = $sdk->notifyFraudScreeningReview($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

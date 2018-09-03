@@ -109,7 +109,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->payOnline3p($params) 
+    $response = $sdk->payOnline3p($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

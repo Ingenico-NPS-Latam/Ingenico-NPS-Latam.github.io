@@ -1,4 +1,4 @@
-$response = sdk.deleteCustomer($params)
+$response = sdk.deleteCustomer($params);
 
 $response["psp_ResponseCod"];
 $response["psp_ResponseMsg"];

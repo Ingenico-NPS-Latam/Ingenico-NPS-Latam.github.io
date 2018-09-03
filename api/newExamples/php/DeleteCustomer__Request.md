@@ -15,7 +15,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->deleteCustomer($params) 
+    $response = $sdk->deleteCustomer($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

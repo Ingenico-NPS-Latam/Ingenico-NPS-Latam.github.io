@@ -1,9 +1,9 @@
-use NpsPerlSDK::Nps;
+use NpsSDK::Nps;
 use warnings;
 use strict;
 
-NpsPerlSDK::Configuration::configure( 
-    environment => $constants::SANDBOX_ENV,
+NpsSDK::Configuration::configure( 
+    environment => $NpsSDK::Constants::SANDBOX_ENV,
     secret_key => "_YOUR_SECRET_KEY_",
     sanitize => 1 
     );
@@ -16,4 +16,4 @@ my $params = {
     "psp_ClientSession" => "C5jwwbyAYneLbvZe0IYPHTvn7ODMb3vG8ZqCYaYIioUmWUbcgKscGpg8WhXrspRs",
 };
 
-my $response = NpsPerlSDK::Nps::get_iin_details($params);
+my $response = NpsSDK::Nps::get_iin_details($params);

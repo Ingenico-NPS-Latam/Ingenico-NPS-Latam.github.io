@@ -15,7 +15,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->changeSecretKey($params) 
+    $response = $sdk->changeSecretKey($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 

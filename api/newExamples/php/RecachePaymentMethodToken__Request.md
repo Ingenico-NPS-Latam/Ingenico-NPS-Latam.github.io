@@ -16,7 +16,7 @@ $params = array(
 );
 
 try{ 
-    $response = $sdk->recachePaymentMethodToken($params) 
+    $response = $sdk->recachePaymentMethodToken($params); 
 }catch(ApiException $e){ 
     echo 'Code to handle error'; 
 } 
