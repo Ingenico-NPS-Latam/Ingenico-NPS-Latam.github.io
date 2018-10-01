@@ -1,0 +1,23 @@
+CAPTURE_RESP_STRUCT Response, *pResponse;
+pResponse = &Response;
+
+printf("psp_ResponseCod: %s\n", pResponse->psp_ResponseCod);
+printf("psp_ResponseMsg: %s\n", pResponse->psp_ResponseMsg);
+printf("psp_ResponseExtended: %s\n", pResponse->psp_ResponseExtended);
+printf("psp_TransactionId: %s\n", pResponse->psp_TransactionId);
+printf("psp_TransactionId_Orig: %s\n", pResponse->psp_TransactionId_Orig);
+printf("psp_MerchantId: %s\n", pResponse->psp_MerchantId);
+printf("psp_MerchTxRef: %s\n", pResponse->psp_MerchTxRef);
+printf("psp_MerchOrderId: %s\n", pResponse->psp_MerchOrderId);
+printf("psp_CapturedAmount: %s\n", pResponse->psp_CapturedAmount);
+printf("psp_AuthorizedAmount_Orig: %s\n", pResponse->psp_AuthorizedAmount_Orig);
+printf("psp_AuthorizationCode: %s\n", pResponse->psp_AuthorizationCode);
+printf("psp_BatchNro: %s\n", pResponse->psp_BatchNro);
+printf("psp_TicketNumber: %s\n", pResponse->psp_TicketNumber);
+printf("psp_Product: %s\n", pResponse->psp_Product);
+printf("psp_ClExternalMerchant: %s\n", pResponse->psp_ClExternalMerchant);
+printf("psp_ClExternalTerminal: %s\n", pResponse->psp_ClExternalTerminal);
+printf("psp_ClResponseCod: %s\n", pResponse->psp_ClResponseCod);
+printf("psp_ClResponseMsg: %s\n", pResponse->psp_ClResponseMsg);
+printf("psp_PosDateTime: %s\n", pResponse->psp_PosDateTime);
+printf("psp_CreatedAt: %s\n", pResponse->psp_CreatedAt);

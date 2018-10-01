@@ -1,0 +1,55 @@
+SIMPLE_QUERY_TX_RESP_STRUCT Response, *pResponse;
+pResponse = &Response;
+
+printf("psp_ResponseCod: %s\n", pResponse->psp_ResponseCod);
+printf("psp_ResponseMsg: %s\n", pResponse->psp_ResponseMsg);
+printf("psp_MerchantId: %s\n", pResponse->psp_MerchantId);
+printf("psp_QueryCriteria: %s\n", pResponse->psp_QueryCriteria);
+printf("psp_QueryCriteriaId: %s\n", pResponse->psp_QueryCriteriaId);
+printf("psp_PosDateTime: %s\n", pResponse->psp_PosDateTime);
+
+RESPUESTASTRUCT_SIMPLEQUERYTX_TRANSACTIONS *pTransactionResponse;
+pTransactionResponse = pResponse->psp_Transaction;
+printf("psp_ResponseCod: %s\n", pTransactionResponse->psp_ResponseCod);
+printf("psp_ResponseMsg: %s\n", pTransactionResponse->psp_ResponseMsg);
+printf("psp_ResponseExtended: %s\n", pTransactionResponse->psp_ResponseExtended);
+printf("psp_TransactionId: %s\n", pTransactionResponse->psp_TransactionId);
+printf("psp_MerchantId: %s\n", pTransactionResponse->psp_MerchantId);
+printf("psp_TxSource: %s\n", pTransactionResponse->psp_TxSource);
+printf("psp_Operation: %s\n", pTransactionResponse->psp_Operation);
+printf("psp_MerchTxRef: %s\n", pTransactionResponse->psp_MerchTxRef);
+printf("psp_MerchOrderId: %s\n", pTransactionResponse->psp_MerchOrderId);
+printf("psp_Amount: %s\n", pTransactionResponse->psp_Amount);
+printf("psp_NumPayments: %s\n", pTransactionResponse->psp_NumPayments);
+printf("psp_Currency: %s\n", pTransactionResponse->psp_Currency);
+printf("psp_Country: %s\n", pTransactionResponse->psp_Country);
+printf("psp_Product: %s\n", pTransactionResponse->psp_Product);
+printf("psp_AuthorizationCode: %s\n", pTransactionResponse->psp_AuthorizationCode);
+printf("psp_BatchNro: %s\n", pTransactionResponse->psp_BatchNro);
+printf("psp_TicketNumber: %s\n", pTransactionResponse->psp_TicketNumber);
+printf("psp_CardNumber_FSD: %s\n", pTransactionResponse->psp_CardNumber_FSD);
+printf("psp_CardNumber_LFD: %s\n", pTransactionResponse->psp_CardNumber_LFD);
+printf("psp_CardMask: %s\n", pTransactionResponse->psp_CardMask);
+printf("psp_ClExternalMerchant: %s\n", pTransactionResponse->psp_ClExternalMerchant);
+printf("psp_ClExternalTerminal: %s\n", pTransactionResponse->psp_ClExternalTerminal);
+printf("psp_ClResponseCod: %s\n", pTransactionResponse->psp_ClResponseCod);
+printf("psp_ClResponseMsg: %s\n", pTransactionResponse->psp_ClResponseMsg);
+printf("psp_PosDateTime: %s\n", pTransactionResponse->psp_PosDateTime);
+printf("psp_CreatedAt: %s\n", pTransactionResponse->psp_CreatedAt);
+
+FRAUD_SCREENING_RESULT_STRUCT *pFraudScreeningResultResponse;
+pFraudScreeningResultResponse = pTransactionResponse->psp_FraudScreeningResult;
+printf("ResultCode: %s\n", pFraudScreeningResultResponse->ResultCode);
+printf("ResultDescription: %s\n", pFraudScreeningResultResponse->ResultDescription);
+
+VERIFICATION_SERVICES_RESULT_STRUCT *pVerificationServicesResultResponse;
+pVerificationServicesResultResponse = pTransactionResponse->psp_VerificationServicesResult;
+printf("ResultCodeCardSecurityCode: %s\n", pVerificationServicesResultResponse->ResultCodeCardSecurityCode);
+printf("ResultCodeBillingAddress: %s\n", pVerificationServicesResultResponse->ResultCodeBillingAddress);
+printf("ResultCodeBillingAddressZipCode: %s\n", pVerificationServicesResultResponse->ResultCodeBillingAddressZipCode);
+printf("ResultCodeBillingPersonIDType: %s\n", pVerificationServicesResultResponse->ResultCodeBillingPersonIDType);
+printf("ResultCodeBillingPersonIDNumber: %s\n", pVerificationServicesResultResponse->ResultCodeBillingPersonIDNumber);
+printf("ResultCodeBillingPersonDateOfBirth: %s\n", pVerificationServicesResultResponse->ResultCodeBillingPersonDateOfBirth);
+printf("ResultCodeBillingPersonName: %s\n", pVerificationServicesResultResponse->ResultCodeBillingPersonName);
+printf("ResultCodeBillingPersonPhoneNumber1: %s\n", pVerificationServicesResultResponse->ResultCodeBillingPersonPhoneNumber1);
+printf("ResultCodeCustomerEmailAddress: %s\n", pVerificationServicesResultResponse->ResultCodeCustomerEmailAddress);
