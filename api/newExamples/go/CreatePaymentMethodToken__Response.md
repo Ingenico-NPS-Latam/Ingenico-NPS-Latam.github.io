@@ -16,7 +16,6 @@ fmt.Printf(pspCardOutputDetails.Last4)
 fmt.Printf(pspCardOutputDetails.NumberLength)
 fmt.Printf(pspCardOutputDetails.MaskedNumber)
 fmt.Printf(pspCardOutputDetails.MaskedNumberAlternative)
-
 fmt.Printf(response.Psp_AlreadyUsed)
 fmt.Printf(response.Psp_CreatedAt)
 fmt.Printf(response.Psp_UpdatedAt)

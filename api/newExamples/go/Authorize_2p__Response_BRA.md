@@ -34,26 +34,15 @@ taxes1 := taxes.Items[1];
 fmt.Printf(taxes1.TypeId)
 fmt.Printf(taxes1.TypeDescription)
 fmt.Printf(taxes1.Amount)
-
-rate := taxes1.Rate
-
-
-baseAmount := taxes1.BaseAmount
-
-
-appliedAmount := taxes1.AppliedAmount
-
-
-remarks := taxes1.Remarks
-
-
-
+fmt.Printf(taxes1.Rate)
+fmt.Printf(taxes1.BaseAmount)
+fmt.Printf(taxes1.AppliedAmount)
+fmt.Printf(taxes1.Remarks)
 
 
 pspFraudScreeningResult := response.Psp_FraudScreeningResult
 fmt.Printf(pspFraudScreeningResult.ResultCode)
 fmt.Printf(pspFraudScreeningResult.ResultDescription)
-
 
 pspVerificationServicesResult := response.Psp_VerificationServicesResult
 fmt.Printf(pspVerificationServicesResult.ResultCodeCardSecurityCode)
@@ -65,4 +54,3 @@ fmt.Printf(pspVerificationServicesResult.ResultCodeBillingPersonDateOfBirth)
 fmt.Printf(pspVerificationServicesResult.ResultCodeBillingPersonName)
 fmt.Printf(pspVerificationServicesResult.ResultCodeBillingPersonPhoneNumber1)
 fmt.Printf(pspVerificationServicesResult.ResultCodeCustomerEmailAddress)
-

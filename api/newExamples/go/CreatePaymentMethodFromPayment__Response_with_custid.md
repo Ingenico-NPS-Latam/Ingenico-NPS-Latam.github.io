@@ -18,10 +18,8 @@ fmt.Printf(cardOutputDetails.Last4)
 fmt.Printf(cardOutputDetails.NumberLength)
 fmt.Printf(cardOutputDetails.MaskedNumber)
 fmt.Printf(cardOutputDetails.MaskedNumberAlternative)
-
 fmt.Printf(pspPaymentMethod.FingerPrint)
 fmt.Printf(pspPaymentMethod.CreatedAt)
 fmt.Printf(pspPaymentMethod.UpdatedAt)
-
 fmt.Printf(response.Psp_CustomerId)
 fmt.Printf(response.Psp_PosDateTime)

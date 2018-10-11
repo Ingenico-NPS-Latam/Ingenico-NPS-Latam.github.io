@@ -6,7 +6,6 @@ fmt.Printf(response.Psp_ResponseMsg)
 pspResult := response.Psp_Result
 fmt.Printf(pspResult.ResultCode)
 fmt.Printf(pspResult.ResultDescription)
-
 fmt.Printf(response.Psp_OrderId)
 fmt.Printf(response.Psp_MerchantId)
 fmt.Printf(response.Psp_MerchTxRef)

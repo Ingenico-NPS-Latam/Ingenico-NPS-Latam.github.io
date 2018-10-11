@@ -23,31 +23,33 @@ SplitPayOnLine3p.Psp_Country = "ARG"
 SplitPayOnLine3p.Psp_Product = "14"
 SplitPayOnLine3p.Psp_PosDateTime = "2019-12-01 12:00:00"
 
-pspTransactions := nps.NewTransactionsStruct()
+pspTransactions := nps.NewArrayOf_TransactionsStruct()
+pspTransactions.Items = make([]*nps.NewTransactionsStruct(), 0)
 
-pspTransactions1 := pspTransactions.Items[1];
+pspTransactions1 := nps.NewpspTransactionsStruct()
 pspTransactions1.Psp_MerchantId = "sdk_test"
 pspTransactions1.Psp_MerchTxRef = "ORDER66666-10"
 pspTransactions1.Psp_Product = "14"
 pspTransactions1.Psp_Amount = "10000"
 pspTransactions1.Psp_NumPayments = "1"
 
-pspTransactions2 := pspTransactions.Items[2];
+pspTransactions.Items = append(pspTransactions.Items, pspTransactions1)
+pspTransactions2 := nps.NewpspTransactionsStruct()
 pspTransactions2.Psp_MerchantId = "sdk_test"
 pspTransactions2.Psp_MerchTxRef = "ORDER66666-11"
 pspTransactions2.Psp_Product = "14"
 pspTransactions2.Psp_Amount = "5050"
 pspTransactions2.Psp_NumPayments = "1"
 
-
-SplitPayOnLine3p.psp_Transactions = pspTransactions
+pspTransactions.Items = append(pspTransactions.Items, pspTransactions2)
 
 pspAirlineDetails := nps.NewAirlineDetailsStruct()
 pspAirlineDetails.PNR = "154DDD54DWW11"
 
-Passengers := nps.NewPassengersStruct()
+Passengers := nps.NewArrayOf_PassengersStruct()
+Passengers.Items = make([]*nps.NewPassengersStruct(), 0)
 
-Passengers1 := Passengers.Items[1];
+Passengers1 := nps.NewPassengersStruct()
 Passengers1.FirstName = "John"
 Passengers1.LastName = "Doe"
 Passengers1.MiddleName = "Michael"
@@ -60,8 +62,7 @@ Passengers1.IDCountry = "ARG"
 Passengers1.LoyaltyNumber = "254587547"
 Passengers1.LoyaltyTier = "1"
 
-
-pspAirlineDetails.Passengers = Passengers
+Passengers.Items = append(Passengers.Items, Passengers1)
 
 Ticket := nps.NewTicketStruct()
 Ticket.TicketNumber = "07411865255578"

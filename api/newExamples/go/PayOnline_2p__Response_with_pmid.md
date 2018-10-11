@@ -12,7 +12,6 @@ fmt.Printf(response.Psp_NumPayments)
 fmt.Printf(response.Psp_Currency)
 fmt.Printf(response.Psp_Country)
 fmt.Printf(response.Psp_Product)
-fmt.Printf(response.Psp_CardExpDate)
 fmt.Printf(response.Psp_AuthorizationCode)
 fmt.Printf(response.Psp_BatchNro)
 fmt.Printf(response.Psp_TicketNumber)
@@ -27,7 +26,6 @@ pspFraudScreeningResult := response.Psp_FraudScreeningResult
 fmt.Printf(pspFraudScreeningResult.ResultCode)
 fmt.Printf(pspFraudScreeningResult.ResultDescription)
 
-
 pspVerificationServicesResult := response.Psp_VerificationServicesResult
 fmt.Printf(pspVerificationServicesResult.ResultCodeCardSecurityCode)
 fmt.Printf(pspVerificationServicesResult.ResultCodeBillingAddress)
@@ -38,4 +36,3 @@ fmt.Printf(pspVerificationServicesResult.ResultCodeBillingPersonDateOfBirth)
 fmt.Printf(pspVerificationServicesResult.ResultCodeBillingPersonName)
 fmt.Printf(pspVerificationServicesResult.ResultCodeBillingPersonPhoneNumber1)
 fmt.Printf(pspVerificationServicesResult.ResultCodeCustomerEmailAddress)
-

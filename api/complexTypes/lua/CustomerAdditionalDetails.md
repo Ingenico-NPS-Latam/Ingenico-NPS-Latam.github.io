@@ -1,0 +1,12 @@
+pspCustomerAdditionalDetails = {}
+pspCustomerAdditionalDetails.EmailAddress = "jdoe@email.com"
+pspCustomerAdditionalDetails.AlternativeEmailAddress = "Jdoe79@email.com"
+pspCustomerAdditionalDetails.IPAddress = "192.168.158.190"
+pspCustomerAdditionalDetails.AccountID = "Jdoe78"
+pspCustomerAdditionalDetails.AccountCreatedAt = "2010-10-23"
+pspCustomerAdditionalDetails.AccountPreviousActivity = "1"
+pspCustomerAdditionalDetails.AccountHasCredentials = "1"
+pspCustomerAdditionalDetails.DeviceType = "1"
+pspCustomerAdditionalDetails.DeviceFingerPrint = "KJhKHKJgh7777kgh..."
+pspCustomerAdditionalDetails.BrowserLanguage = "ES"
+pspCustomerAdditionalDetails.HttpUserAgent = "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:21.0) Gecko/20100101 Firefox/21.0"

@@ -25,22 +25,23 @@ PayOnLine2p.Psp_CardExpDate = "1808"
 PayOnLine2p.Psp_PosDateTime = "2018-07-05 12:00:00"
 PayOnLine2p.Psp_Amount = "31200"
 
-pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
+pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsRequestStruct()
 
-Taxes := nps.NewTaxesStruct()
+Taxes := nps.NewArrayOf_TaxesRequestStruct()
+Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 
-Taxes1 := Taxes.Items[1];
+Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "700"
 Taxes1.Amount = "1200"
 Taxes1.Rate = "1200"
 Taxes1.BaseAmount = "10000"
 
-Taxes2 := Taxes.Items[2];
+Taxes.Items = append(Taxes.Items, Taxes1)
+Taxes2 := nps.NewTaxesRequestStruct()
 Taxes2.TypeId = "701"
 Taxes2.BaseAmount = "20000"
 
-
-pspAmountAdditionalDetails.Taxes = Taxes
+Taxes.Items = append(Taxes.Items, Taxes2)
 
 PayOnLine2p.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 

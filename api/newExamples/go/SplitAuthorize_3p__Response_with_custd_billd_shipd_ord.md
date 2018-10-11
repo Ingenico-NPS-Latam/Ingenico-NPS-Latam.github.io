@@ -26,7 +26,6 @@ fmt.Printf(pspTransactions1.Psp_Amount)
 fmt.Printf(pspTransactions1.Psp_NumPayments)
 fmt.Printf(pspTransactions1.Psp_CreatedAt)
 
-
 pspTransactions2 := pspTransactions.Items[2];
 fmt.Printf(pspTransactions2.Psp_MerchantId)
 fmt.Printf(pspTransactions2.Psp_TransactionId)
@@ -35,5 +34,4 @@ fmt.Printf(pspTransactions2.Psp_Product)
 fmt.Printf(pspTransactions2.Psp_Amount)
 fmt.Printf(pspTransactions2.Psp_NumPayments)
 fmt.Printf(pspTransactions2.Psp_CreatedAt)
-
 

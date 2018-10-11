@@ -113,9 +113,10 @@ PayOnLine2p.psp_ShippingDetails = pspShippingDetails
 
 pspOrderDetails := nps.NewOrderDetailsStruct()
 
-OrderItems := nps.NewOrderItemsStruct()
+OrderItems := nps.NewArrayOf_OrderItemsStruct()
+OrderItems.Items = make([]*nps.NewOrderItemsStruct(), 0)
 
-OrderItems1 := OrderItems.Items[1];
+OrderItems1 := nps.NewOrderItemsStruct()
 OrderItems1.Quantity = "10"
 OrderItems1.UnitPrice = "10050"
 OrderItems1.Description = "Blue pencil"
@@ -124,8 +125,7 @@ OrderItems1.SkuCode = "SO-4587885545"
 OrderItems1.ManufacturerPartNumber = "CN-0N2828421-3AD-02CD"
 OrderItems1.Risk = "H"
 
-
-pspOrderDetails.OrderItems = OrderItems
+OrderItems.Items = append(OrderItems.Items, OrderItems1)
 
 PayOnLine2p.psp_OrderDetails = pspOrderDetails
 

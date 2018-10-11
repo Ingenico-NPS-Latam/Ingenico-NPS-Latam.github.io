@@ -21,7 +21,6 @@ fmt.Printf(pspPerson.Nationality)
 fmt.Printf(pspPerson.IDNumber)
 fmt.Printf(pspPerson.IDType)
 
-
 pspAddress := response.Psp_Address
 fmt.Printf(pspAddress.Street)
 fmt.Printf(pspAddress.HouseNumber)
@@ -30,7 +29,6 @@ fmt.Printf(pspAddress.City)
 fmt.Printf(pspAddress.StateProvince)
 fmt.Printf(pspAddress.Country)
 fmt.Printf(pspAddress.ZipCode)
-
 fmt.Printf(response.Psp_DefaultPaymentMethodId)
 
 pspPaymentMethods := response.Psp_PaymentMethods
@@ -49,7 +47,6 @@ fmt.Printf(cardOutputDetails.Last4)
 fmt.Printf(cardOutputDetails.NumberLength)
 fmt.Printf(cardOutputDetails.MaskedNumber)
 fmt.Printf(cardOutputDetails.MaskedNumberAlternative)
-
 fmt.Printf(pspPaymentMethods1.FingerPrint)
 
 person := pspPaymentMethods1.Person
@@ -64,7 +61,6 @@ fmt.Printf(person.Nationality)
 fmt.Printf(person.IDNumber)
 fmt.Printf(person.IDType)
 
-
 address := pspPaymentMethods1.Address
 fmt.Printf(address.Street)
 fmt.Printf(address.HouseNumber)
@@ -73,9 +69,7 @@ fmt.Printf(address.City)
 fmt.Printf(address.StateProvince)
 fmt.Printf(address.Country)
 fmt.Printf(address.ZipCode)
-
 fmt.Printf(pspPaymentMethods1.CreatedAt)
 fmt.Printf(pspPaymentMethods1.UpdatedAt)
-
 
 fmt.Printf(response.Psp_PosDateTime)

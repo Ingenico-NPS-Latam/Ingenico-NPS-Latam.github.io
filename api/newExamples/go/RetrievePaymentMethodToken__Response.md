@@ -17,7 +17,6 @@ fmt.Printf(pspCardOutputDetails.NumberLength)
 fmt.Printf(pspCardOutputDetails.MaskedNumber)
 fmt.Printf(pspCardOutputDetails.MaskedNumberAlternative)
 
-
 pspPerson := response.Psp_Person
 fmt.Printf(pspPerson.FirstName)
 fmt.Printf(pspPerson.LastName)
@@ -30,7 +29,6 @@ fmt.Printf(pspPerson.Nationality)
 fmt.Printf(pspPerson.IDNumber)
 fmt.Printf(pspPerson.IDType)
 
-
 pspAddress := response.Psp_Address
 fmt.Printf(pspAddress.Street)
 fmt.Printf(pspAddress.HouseNumber)
@@ -39,7 +37,6 @@ fmt.Printf(pspAddress.City)
 fmt.Printf(pspAddress.StateProvince)
 fmt.Printf(pspAddress.Country)
 fmt.Printf(pspAddress.ZipCode)
-
 fmt.Printf(response.Psp_AlreadyUsed)
 fmt.Printf(response.Psp_CreatedAt)
 fmt.Printf(response.Psp_UpdatedAt)

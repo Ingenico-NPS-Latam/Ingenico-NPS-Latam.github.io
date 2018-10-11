@@ -30,58 +30,59 @@ pspBillingDetails.InvoiceCurrency = "858"
 
 SplitAuthorize3p.psp_BillingDetails = pspBillingDetails
 
-pspTransactions := nps.NewTransactionsStruct()
+pspTransactions := nps.NewArrayOf_TransactionsStruct()
+pspTransactions.Items = make([]*nps.NewTransactionsStruct(), 0)
 
-pspTransactions1 := pspTransactions.Items[1];
+pspTransactions1 := nps.NewpspTransactionsStruct()
 pspTransactions1.Psp_MerchantId = "sdk_test"
 pspTransactions1.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions1.Psp_Product = "5"
 pspTransactions1.Psp_Amount = "1220000"
 pspTransactions1.Psp_NumPayments = "1"
 
-pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
+pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsRequestStruct()
 pspAmountAdditionalDetails.Tip = "20"
 pspAmountAdditionalDetails.Discount = "1"
 
-Taxes := nps.NewTaxesStruct()
+Taxes := nps.NewArrayOf_TaxesRequestStruct()
+Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 
-Taxes1 := Taxes.Items[1];
+Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "601"
 Taxes1.Amount = "220000"
 Taxes1.Rate = "2200"
 Taxes1.BaseAmount = "1000000"
 
-
-pspAmountAdditionalDetails.Taxes = Taxes
+Taxes.Items = append(Taxes.Items, Taxes1)
 
 pspTransactions1.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
-pspTransactions2 := pspTransactions.Items[2];
+pspTransactions.Items = append(pspTransactions.Items, pspTransactions1)
+pspTransactions2 := nps.NewpspTransactionsStruct()
 pspTransactions2.Psp_MerchantId = "sdk_test"
 pspTransactions2.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions2.Psp_Product = "5"
 pspTransactions2.Psp_Amount = "1220000"
 pspTransactions2.Psp_NumPayments = "1"
 
-pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
+pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsRequestStruct()
 pspAmountAdditionalDetails.Tip = "20"
 pspAmountAdditionalDetails.Discount = "1"
 
-Taxes := nps.NewTaxesStruct()
+Taxes := nps.NewArrayOf_TaxesRequestStruct()
+Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 
-Taxes1 := Taxes.Items[1];
+Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "601"
 Taxes1.Amount = "220000"
 Taxes1.Rate = "2200"
 Taxes1.BaseAmount = "1000000"
 
-
-pspAmountAdditionalDetails.Taxes = Taxes
+Taxes.Items = append(Taxes.Items, Taxes1)
 
 pspTransactions2.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
-
-SplitAuthorize3p.psp_Transactions = pspTransactions
+pspTransactions.Items = append(pspTransactions.Items, pspTransactions2)
 
 response, err := service.SplitAuthorize_3p(SplitAuthorize3p)
 

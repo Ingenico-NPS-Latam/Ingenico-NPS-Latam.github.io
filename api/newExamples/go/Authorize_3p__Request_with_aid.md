@@ -28,9 +28,10 @@ Authorize3p.Psp_PosDateTime = "2019-12-01 12:00:00"
 pspAirlineDetails := nps.NewAirlineDetailsStruct()
 pspAirlineDetails.PNR = "154DDD54DWW11"
 
-Legs := nps.NewLegsStruct()
+Legs := nps.NewArrayOf_LegsStruct()
+Legs.Items = make([]*nps.NewLegsStruct(), 0)
 
-Legs1 := Legs.Items[1];
+Legs1 := nps.NewLegsStruct()
 Legs1.DepartureAirport = "EZE"
 Legs1.DepartureDatetime = "2014-05-12 13:05:00"
 Legs1.DepartureAirportTimezone = "-03:00"
@@ -42,12 +43,12 @@ Legs1.FareClassCode = "FR"
 Legs1.BaseFare = "30000"
 Legs1.BaseFareCurrency = "032"
 
+Legs.Items = append(Legs.Items, Legs1)
 
-pspAirlineDetails.Legs = Legs
+Passengers := nps.NewArrayOf_PassengersStruct()
+Passengers.Items = make([]*nps.NewPassengersStruct(), 0)
 
-Passengers := nps.NewPassengersStruct()
-
-Passengers1 := Passengers.Items[1];
+Passengers1 := nps.NewPassengersStruct()
 Passengers1.FirstName = "John"
 Passengers1.LastName = "Doe"
 Passengers1.MiddleName = "Michael"
@@ -60,8 +61,7 @@ Passengers1.IDCountry = "ARG"
 Passengers1.LoyaltyNumber = "254587547"
 Passengers1.LoyaltyTier = "1"
 
-
-pspAirlineDetails.Passengers = Passengers
+Passengers.Items = append(Passengers.Items, Passengers1)
 
 Ticket := nps.NewTicketStruct()
 Ticket.TicketNumber = "07411865255578"

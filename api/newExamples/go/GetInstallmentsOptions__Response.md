@@ -15,5 +15,4 @@ pspInstallmentsOptions1 := pspInstallmentsOptions.Items[1];
 fmt.Printf(pspInstallmentsOptions1.NumPayments)
 fmt.Printf(pspInstallmentsOptions1.InstallmentAmount)
 
-
 fmt.Printf(response.Psp_PosDateTime)

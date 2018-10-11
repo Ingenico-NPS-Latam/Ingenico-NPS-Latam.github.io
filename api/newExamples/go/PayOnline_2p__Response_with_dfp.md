@@ -28,7 +28,6 @@ pspFraudScreeningResult := response.Psp_FraudScreeningResult
 fmt.Printf(pspFraudScreeningResult.ResultCode)
 fmt.Printf(pspFraudScreeningResult.ResultDescription)
 
-
 pspVerificationServicesResult := response.Psp_VerificationServicesResult
 fmt.Printf(pspVerificationServicesResult.ResultCodeCardSecurityCode)
 fmt.Printf(pspVerificationServicesResult.ResultCodeBillingAddress)
@@ -39,4 +38,3 @@ fmt.Printf(pspVerificationServicesResult.ResultCodeBillingPersonDateOfBirth)
 fmt.Printf(pspVerificationServicesResult.ResultCodeBillingPersonName)
 fmt.Printf(pspVerificationServicesResult.ResultCodeBillingPersonPhoneNumber1)
 fmt.Printf(pspVerificationServicesResult.ResultCodeCustomerEmailAddress)
-

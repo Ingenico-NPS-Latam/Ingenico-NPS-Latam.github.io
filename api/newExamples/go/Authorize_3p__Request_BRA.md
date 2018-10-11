@@ -25,18 +25,18 @@ Authorize3p.Psp_Country = "BRA"
 Authorize3p.Psp_Product = "14"
 Authorize3p.Psp_PosDateTime = "2019-12-01 12:00:00"
 
-pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
+pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsRequestStruct()
 pspAmountAdditionalDetails.Tip = "20"
 pspAmountAdditionalDetails.Discount = "1"
 
-Taxes := nps.NewTaxesStruct()
+Taxes := nps.NewArrayOf_TaxesRequestStruct()
+Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 
-Taxes1 := Taxes.Items[1];
+Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "100"
 Taxes1.Amount = "200000"
 
-
-pspAmountAdditionalDetails.Taxes = Taxes
+Taxes.Items = append(Taxes.Items, Taxes1)
 
 Authorize3p.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 

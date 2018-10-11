@@ -25,24 +25,25 @@ PayOnLine3p.Psp_Country = "COL"
 PayOnLine3p.Psp_Product = "14"
 PayOnLine3p.Psp_PosDateTime = "2019-12-01 12:00:00"
 
-pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
+pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsRequestStruct()
 pspAmountAdditionalDetails.Tip = "20"
 pspAmountAdditionalDetails.Discount = "1"
 
-Taxes := nps.NewTaxesStruct()
+Taxes := nps.NewArrayOf_TaxesRequestStruct()
+Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 
-Taxes1 := Taxes.Items[1];
+Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "100"
 Taxes1.Amount = "200000"
 
-Taxes2 := Taxes.Items[2];
+Taxes.Items = append(Taxes.Items, Taxes1)
+Taxes2 := nps.NewTaxesRequestStruct()
 Taxes2.TypeId = "501"
 Taxes2.Amount = "160000"
 Taxes2.Rate = "1600"
 Taxes2.BaseAmount = "1000000"
 
-
-pspAmountAdditionalDetails.Taxes = Taxes
+Taxes.Items = append(Taxes.Items, Taxes2)
 
 PayOnLine3p.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 

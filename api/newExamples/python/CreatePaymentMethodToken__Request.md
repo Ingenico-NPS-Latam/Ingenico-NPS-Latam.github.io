@@ -9,11 +9,10 @@ sdk = nps_sdk.Nps()
 params = {
     'psp_Version': '2.2',
     'psp_MerchantId': 'sdk_test',
-    'psp_CardInputDetails': {
-        'Number': '4507990000000010',
-        'ExpirationDate': '2501',
-        'SecurityCode': '123',
-        'HolderName': 'JOHN DOE'
+    'psp_WalletInputDetails': {
+        'WalletTypeId': '2',
+        'WalletKey': '3688e6474192fbaaca6f46f96142b82509c87000',
+        'MerchOrderId': '1efed583-1824-436a-869f-286ebdb22ae9'
     },
     'psp_ClientSession': 'C5jwwbyAYneLbvZe0IYPHTvn7ODMb3vG8ZqCYaYIioUmWUbcgKscGpg8WhXrspRs'
 }

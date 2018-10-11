@@ -23,66 +23,69 @@ SplitPayOnLine3p.Psp_Country = "COL"
 SplitPayOnLine3p.Psp_Product = "14"
 SplitPayOnLine3p.Psp_PosDateTime = "2019-12-01 12:00:00"
 
-pspTransactions := nps.NewTransactionsStruct()
+pspTransactions := nps.NewArrayOf_TransactionsStruct()
+pspTransactions.Items = make([]*nps.NewTransactionsStruct(), 0)
 
-pspTransactions1 := pspTransactions.Items[1];
+pspTransactions1 := nps.NewpspTransactionsStruct()
 pspTransactions1.Psp_MerchantId = "sdk_test"
 pspTransactions1.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions1.Psp_Product = "14"
 pspTransactions1.Psp_Amount = "1360000"
 pspTransactions1.Psp_NumPayments = "1"
 
-pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
+pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsRequestStruct()
 pspAmountAdditionalDetails.Tip = "20"
 pspAmountAdditionalDetails.Discount = "1"
 
-Taxes := nps.NewTaxesStruct()
+Taxes := nps.NewArrayOf_TaxesRequestStruct()
+Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 
-Taxes1 := Taxes.Items[1];
+Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "100"
 Taxes1.Amount = "200000"
 
-Taxes2 := Taxes.Items[2];
+Taxes.Items = append(Taxes.Items, Taxes1)
+Taxes2 := nps.NewTaxesRequestStruct()
 Taxes2.TypeId = "501"
 Taxes2.Amount = "160000"
 Taxes2.Rate = "1600"
 Taxes2.BaseAmount = "1000000"
 
-
-pspAmountAdditionalDetails.Taxes = Taxes
+Taxes.Items = append(Taxes.Items, Taxes2)
 
 pspTransactions1.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
-pspTransactions2 := pspTransactions.Items[2];
+pspTransactions.Items = append(pspTransactions.Items, pspTransactions1)
+pspTransactions2 := nps.NewpspTransactionsStruct()
 pspTransactions2.Psp_MerchantId = "sdk_test"
 pspTransactions2.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions2.Psp_Product = "14"
 pspTransactions2.Psp_Amount = "1360000"
 pspTransactions2.Psp_NumPayments = "1"
 
-pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsStruct()
+pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsRequestStruct()
 pspAmountAdditionalDetails.Tip = "20"
 pspAmountAdditionalDetails.Discount = "1"
 
-Taxes := nps.NewTaxesStruct()
+Taxes := nps.NewArrayOf_TaxesRequestStruct()
+Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 
-Taxes1 := Taxes.Items[1];
+Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "100"
 Taxes1.Amount = "200000"
 
-Taxes2 := Taxes.Items[2];
+Taxes.Items = append(Taxes.Items, Taxes1)
+Taxes2 := nps.NewTaxesRequestStruct()
 Taxes2.TypeId = "501"
 Taxes2.Amount = "160000"
 Taxes2.Rate = "1600"
 Taxes2.BaseAmount = "1000000"
 
-
-pspAmountAdditionalDetails.Taxes = Taxes
+Taxes.Items = append(Taxes.Items, Taxes2)
 
 pspTransactions2.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
-
-SplitPayOnLine3p.psp_Transactions = pspTransactions
+pspTransactions.Items = append(pspTransactions.Items, pspTransactions2)
 
 response, err := service.SplitPayOnLine_3p(SplitPayOnLine3p)
 

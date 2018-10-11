@@ -121,24 +121,25 @@ pspShippingDetails.Address = Address
 
 SplitAuthorize3p.psp_ShippingDetails = pspShippingDetails
 
-pspTransactions := nps.NewTransactionsStruct()
+pspTransactions := nps.NewArrayOf_TransactionsStruct()
+pspTransactions.Items = make([]*nps.NewTransactionsStruct(), 0)
 
-pspTransactions1 := pspTransactions.Items[1];
+pspTransactions1 := nps.NewpspTransactionsStruct()
 pspTransactions1.Psp_MerchantId = "sdk_test"
 pspTransactions1.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions1.Psp_Product = "14"
 pspTransactions1.Psp_Amount = "10000"
 pspTransactions1.Psp_NumPayments = "1"
 
-pspTransactions2 := pspTransactions.Items[2];
+pspTransactions.Items = append(pspTransactions.Items, pspTransactions1)
+pspTransactions2 := nps.NewpspTransactionsStruct()
 pspTransactions2.Psp_MerchantId = "sdk_test"
 pspTransactions2.Psp_MerchTxRef = "ORDER66666-3"
 pspTransactions2.Psp_Product = "14"
 pspTransactions2.Psp_Amount = "5050"
 pspTransactions2.Psp_NumPayments = "1"
 
-
-SplitAuthorize3p.psp_Transactions = pspTransactions
+pspTransactions.Items = append(pspTransactions.Items, pspTransactions2)
 
 response, err := service.SplitAuthorize_3p(SplitAuthorize3p)
 
