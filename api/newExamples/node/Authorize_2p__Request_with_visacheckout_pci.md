@@ -20,8 +20,7 @@ sdk.authorize2p({
     'psp_CardExpDate': '1912',
     'psp_PosDateTime': '2019-12-01 12:00:00',
     'psp_WalletReference': {
-        'WalletTypeId': '1',
-        'WalletIdentificationCode': '101'
+        'WalletTypeId': '1'
     }
 },
 function (error, response) { 

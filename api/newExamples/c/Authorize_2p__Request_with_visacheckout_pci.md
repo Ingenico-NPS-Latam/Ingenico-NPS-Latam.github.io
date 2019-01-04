@@ -64,9 +64,6 @@ int main(int argc, char **argv) {
     pWalletReference->WalletTypeId = malloc(strlen('1')+1);
     strcpy(pWalletReference->WalletTypeId, '1');
 
-    pWalletReference->WalletIdentificationCode = malloc(strlen('101')+1);
-    strcpy(pWalletReference->WalletIdentificationCode, '101');
-
     pRequest->psp_WalletReference = pWalletReference;
 
 

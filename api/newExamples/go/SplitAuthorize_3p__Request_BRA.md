@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-SplitAuthorize3p := nps.NewRequerimientoStruct_SplitAuthorize_3p()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+SplitAuthorize3p := npsSdk.NewRequerimientoStruct_SplitAuthorize_3p()
 
 SplitAuthorize3p.Psp_Version = "2.2"
 SplitAuthorize3p.Psp_MerchantId = "sdk_test"
@@ -43,12 +51,12 @@ Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "100"
 Taxes1.Amount = "200000"
-
 Taxes.Items = append(Taxes.Items, Taxes1)
 
-pspTransactions1.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
+pspTransactions1.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 pspTransactions.Items = append(pspTransactions.Items, pspTransactions1)
+
 pspTransactions2 := nps.NewpspTransactionsStruct()
 pspTransactions2.Psp_MerchantId = "sdk_test"
 pspTransactions2.Psp_MerchTxRef = "ORDER66666-3"
@@ -66,20 +74,17 @@ Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "100"
 Taxes1.Amount = "200000"
-
 Taxes.Items = append(Taxes.Items, Taxes1)
 
-pspTransactions2.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
+pspTransactions2.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 pspTransactions.Items = append(pspTransactions.Items, pspTransactions2)
 
-response, err := service.SplitAuthorize_3p(SplitAuthorize3p)
+
+resp, err := service.SplitAuthorize_3p(SplitAuthorize3p)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

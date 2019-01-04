@@ -21,7 +21,6 @@ authorize2p.psp_PosDateTime = "2019-12-01 12:00:00"
 
 pspWalletReference = {}
 pspWalletReference.WalletTypeId = "1"
-pspWalletReference.WalletIdentificationCode = "101"
 
 authorize2p.psp_WalletReference = pspWalletReference
 

@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-SplitPayOnLine3p := nps.NewRequerimientoStruct_SplitPayOnLine_3p()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+SplitPayOnLine3p := npsSdk.NewRequerimientoStruct_SplitPayOnLine_3p()
 
 SplitPayOnLine3p.Psp_Version = "2.2"
 SplitPayOnLine3p.Psp_MerchantId = "sdk_test"
@@ -32,16 +40,16 @@ pspTransactions1.Psp_MerchTxRef = "ORDER66666-10"
 pspTransactions1.Psp_Product = "14"
 pspTransactions1.Psp_Amount = "10000"
 pspTransactions1.Psp_NumPayments = "1"
-
 pspTransactions.Items = append(pspTransactions.Items, pspTransactions1)
+
 pspTransactions2 := nps.NewpspTransactionsStruct()
 pspTransactions2.Psp_MerchantId = "sdk_test"
 pspTransactions2.Psp_MerchTxRef = "ORDER66666-11"
 pspTransactions2.Psp_Product = "14"
 pspTransactions2.Psp_Amount = "5050"
 pspTransactions2.Psp_NumPayments = "1"
-
 pspTransactions.Items = append(pspTransactions.Items, pspTransactions2)
+
 
 pspAirlineDetails := nps.NewAirlineDetailsStruct()
 pspAirlineDetails.PNR = "154DDD54DWW11"
@@ -61,8 +69,8 @@ Passengers1.IDType = "100"
 Passengers1.IDCountry = "ARG"
 Passengers1.LoyaltyNumber = "254587547"
 Passengers1.LoyaltyTier = "1"
-
 Passengers.Items = append(Passengers.Items, Passengers1)
+
 
 Ticket := nps.NewTicketStruct()
 Ticket.TicketNumber = "07411865255578"
@@ -86,13 +94,10 @@ pspAirlineDetails.Ticket = Ticket
 
 SplitPayOnLine3p.psp_AirlineDetails = pspAirlineDetails
 
-response, err := service.SplitPayOnLine_3p(SplitPayOnLine3p)
+resp, err := service.SplitPayOnLine_3p(SplitPayOnLine3p)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

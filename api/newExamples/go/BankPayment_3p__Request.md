@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-BankPayment3p := nps.NewRequerimientoStruct_BankPayment_3p()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+BankPayment3p := npsSdk.NewRequerimientoStruct_BankPayment_3p()
 
 BankPayment3p.Psp_Version = "2.2"
 BankPayment3p.Psp_MerchantId = "sdk_test"
@@ -29,13 +37,10 @@ BankPayment3p.Psp_ExpMark = "0"
 BankPayment3p.Psp_ExpTime = "14:00:00"
 BankPayment3p.Psp_PosDateTime = "2019-12-01 12:00:00"
 
-response, err := service.BankPayment_3p(BankPayment3p)
+resp, err := service.BankPayment_3p(BankPayment3p)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

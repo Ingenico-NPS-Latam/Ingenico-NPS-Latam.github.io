@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-SplitAuthorize3p := nps.NewRequerimientoStruct_SplitAuthorize_3p()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+SplitAuthorize3p := npsSdk.NewRequerimientoStruct_SplitAuthorize_3p()
 
 SplitAuthorize3p.Psp_Version = "2.2"
 SplitAuthorize3p.Psp_MerchantId = "sdk_test"
@@ -126,13 +134,10 @@ pspShippingDetails.Address = Address
 
 SplitAuthorize3p.psp_ShippingDetails = pspShippingDetails
 
-response, err := service.SplitAuthorize_3p(SplitAuthorize3p)
+resp, err := service.SplitAuthorize_3p(SplitAuthorize3p)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

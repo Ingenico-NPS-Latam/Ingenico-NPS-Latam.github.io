@@ -22,7 +22,6 @@ try{
 
     ComplexElement pspWalletReference = new ComplexElement();
     pspWalletReference.Add("WalletTypeId", "1");
-    pspWalletReference.Add("WalletIdentificationCode", "101");
 
     data.Add("psp_WalletReference", pspWalletReference);
     RootElement response = npsSdk.PayOnline_2p(data);

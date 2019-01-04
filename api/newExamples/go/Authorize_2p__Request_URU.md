@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-Authorize2p := nps.NewRequerimientoStruct_Authorize_2p()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+Authorize2p := npsSdk.NewRequerimientoStruct_Authorize_2p()
 
 Authorize2p.Psp_Version = "2.2"
 Authorize2p.Psp_MerchantId = "sdk_test"
@@ -37,8 +45,8 @@ Taxes1.TypeId = "601"
 Taxes1.Amount = "220000"
 Taxes1.Rate = "2200"
 Taxes1.BaseAmount = "1000000"
-
 Taxes.Items = append(Taxes.Items, Taxes1)
+
 
 Authorize2p.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
@@ -49,13 +57,10 @@ pspBillingDetails.InvoiceCurrency = "858"
 
 Authorize2p.psp_BillingDetails = pspBillingDetails
 
-response, err := service.Authorize_2p(Authorize2p)
+resp, err := service.Authorize_2p(Authorize2p)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

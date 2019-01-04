@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-PayOnLine2p := nps.NewRequerimientoStruct_PayOnLine_2p()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+PayOnLine2p := npsSdk.NewRequerimientoStruct_PayOnLine_2p()
 
 PayOnLine2p.Psp_Version = "2.2"
 PayOnLine2p.Psp_MerchantId = "psp_test"
@@ -38,18 +46,15 @@ Taxes.Items = make([]*nps.NewTaxesRequestStruct(), 0)
 Taxes1 := nps.NewTaxesRequestStruct()
 Taxes1.TypeId = "100"
 Taxes1.Amount = "200000"
-
 Taxes.Items = append(Taxes.Items, Taxes1)
+
 
 PayOnLine2p.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
-response, err := service.PayOnLine_2p(PayOnLine2p)
+resp, err := service.PayOnLine_2p(PayOnLine2p)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

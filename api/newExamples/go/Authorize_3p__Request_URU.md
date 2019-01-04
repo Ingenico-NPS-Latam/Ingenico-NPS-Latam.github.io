@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-Authorize3p := nps.NewRequerimientoStruct_Authorize_3p()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+Authorize3p := npsSdk.NewRequerimientoStruct_Authorize_3p()
 
 Authorize3p.Psp_Version = "2.2"
 Authorize3p.Psp_MerchantId = "sdk_test"
@@ -37,8 +45,8 @@ Taxes1.TypeId = "601"
 Taxes1.Amount = "220000"
 Taxes1.Rate = "2200"
 Taxes1.BaseAmount = "1000000"
-
 Taxes.Items = append(Taxes.Items, Taxes1)
+
 
 Authorize3p.psp_AmountAdditionalDetails = pspAmountAdditionalDetails
 
@@ -49,13 +57,10 @@ pspBillingDetails.InvoiceCurrency = "858"
 
 Authorize3p.psp_BillingDetails = pspBillingDetails
 
-response, err := service.Authorize_3p(Authorize3p)
+resp, err := service.Authorize_3p(Authorize3p)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

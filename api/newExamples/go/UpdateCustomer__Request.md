@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-UpdateCustomer := nps.NewRequerimientoStruct_UpdateCustomer()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+UpdateCustomer := npsSdk.NewRequerimientoStruct_UpdateCustomer()
 
 UpdateCustomer.Psp_Version = "2.2"
 UpdateCustomer.Psp_MerchantId = "sdk_test"
@@ -45,13 +53,10 @@ pspAddress.ZipCode = "33140"
 UpdateCustomer.psp_Address = pspAddress
 UpdateCustomer.Psp_PosDateTime = "2008-01-12 13:05:00"
 
-response, err := service.UpdateCustomer(UpdateCustomer)
+resp, err := service.UpdateCustomer(UpdateCustomer)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

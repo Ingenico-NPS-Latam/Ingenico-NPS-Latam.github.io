@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-CashPayment3p := nps.NewRequerimientoStruct_CashPayment_3p()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+CashPayment3p := npsSdk.NewRequerimientoStruct_CashPayment_3p()
 
 CashPayment3p.Psp_Version = "2.2"
 CashPayment3p.Psp_MerchantId = "sdk_test"
@@ -136,18 +144,15 @@ OrderItems1.Type = "1002"
 OrderItems1.SkuCode = "SO-4587885545"
 OrderItems1.ManufacturerPartNumber = "CN-0N2828421-3AD-02CD"
 OrderItems1.Risk = "H"
-
 OrderItems.Items = append(OrderItems.Items, OrderItems1)
+
 
 CashPayment3p.psp_OrderDetails = pspOrderDetails
 
-response, err := service.CashPayment_3p(CashPayment3p)
+resp, err := service.CashPayment_3p(CashPayment3p)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

@@ -25,7 +25,6 @@ try {
 
     ComplexElement pspWalletReference = new ComplexElement();
     pspWalletReference.add("WalletTypeId", "1");
-    pspWalletReference.add("WalletIdentificationCode", "101");
 
     data.add("psp_WalletReference", pspWalletReference);
     RootElement response = npsSdk.payOnline_2p(data);

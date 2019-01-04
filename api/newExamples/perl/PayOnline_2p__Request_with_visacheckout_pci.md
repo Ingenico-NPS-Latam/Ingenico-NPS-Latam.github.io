@@ -25,7 +25,6 @@ my $params = {
     "psp_PosDateTime" => "2019-12-01 12:00:00",
     "psp_WalletReference" => {
         "WalletTypeId" => "1",
-        "WalletIdentificationCode" => "101",
     }
 };
 

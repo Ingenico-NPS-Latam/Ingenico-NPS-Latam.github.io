@@ -1,15 +1,23 @@
 package main
 
 import (
-        "fmt"
-        "log"
-        "npsSdk"
-        CONSTANTS "npsSdk/constants"
+    "fmt"
+    "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk"
+    CONSTANTS "github.com/Ingenico-NPS-Latam/nps-sdk-go/npsSdk/constants"
 )
 
-service:= nps.NewPaymentServicePlatformPortType(true)
+func main() {
 
-PayOnLine2p := nps.NewRequerimientoStruct_PayOnLine_2p()
+err := npsSdk.Configure(map[string]interface{}(
+    "environment": CONSTANTS.SANDBOX_ENV,
+    "secret_key": "_YOUR_SECRET_KEY_",
+    "debug": true,
+    "log_level": CONSTANTS.DEBUG,
+})
+
+service := npsSdk.NewPaymentServicePlatformPortType(true)
+
+PayOnLine2p := npsSdk.NewRequerimientoStruct_PayOnLine_2p()
 
 PayOnLine2p.Psp_Version = "2.2"
 PayOnLine2p.Psp_MerchantId = "sdk_test"
@@ -30,13 +38,10 @@ PayOnLine2p.Psp_3dSecure_CAVV = "AAABBYZ3N5Qhl3kBU3c3ELGUsMY="
 PayOnLine2p.Psp_3dSecure_ECI = "05"
 PayOnLine2p.Psp_3dSecure_Secured = "1"
 
-response, err := service.PayOnLine_2p(PayOnLine2p)
+resp, err := service.PayOnLine_2p(PayOnLine2p)
 
 if err != nil {
     fmt.Printf("Error: = [%s]", err)
 }
 fmt.Printf("Response = [%s] [%s]", resp.Psp_ResponseCod, resp.Psp_ResponseMsg)
 fmt.Printf("Extended = [%s]", resp.Psp_ResponseExtended)
-
-
-

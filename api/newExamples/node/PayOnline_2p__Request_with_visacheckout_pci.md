@@ -21,8 +21,7 @@ sdk.payOnline2p({
     'psp_CardSecurityCode': '325',
     'psp_PosDateTime': '2019-12-01 12:00:00',
     'psp_WalletReference': {
-        'WalletTypeId': '1',
-        'WalletIdentificationCode': '101'
+        'WalletTypeId': '1'
     }
 },
 function (error, response) { 
