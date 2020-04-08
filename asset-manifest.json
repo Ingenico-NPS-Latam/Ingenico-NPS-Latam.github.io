@@ -1,18 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.4302a2da.chunk.css",
-    "main.js": "/static/js/main.812649c9.chunk.js",
-    "main.js.map": "/static/js/main.812649c9.chunk.js.map",
-    "runtime~main.js": "/static/js/runtime~main.a8a9905a.js",
-    "runtime~main.js.map": "/static/js/runtime~main.a8a9905a.js.map",
-    "static/css/2.38e21ec7.chunk.css": "/static/css/2.38e21ec7.chunk.css",
-    "static/js/2.671c7482.chunk.js": "/static/js/2.671c7482.chunk.js",
-    "static/js/2.671c7482.chunk.js.map": "/static/js/2.671c7482.chunk.js.map",
+    "main.css": "/static/css/main.0c827e1e.chunk.css",
+    "main.js": "/static/js/main.a706c72a.chunk.js",
+    "main.js.map": "/static/js/main.a706c72a.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9aba0c70.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9aba0c70.js.map",
+    "static/css/2.e68d534f.chunk.css": "/static/css/2.e68d534f.chunk.css",
+    "static/js/2.abb4268f.chunk.js": "/static/js/2.abb4268f.chunk.js",
+    "static/js/2.abb4268f.chunk.js.map": "/static/js/2.abb4268f.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.f8c0a793064ba35a098fdf13a58cf69b.js": "/precache-manifest.f8c0a793064ba35a098fdf13a58cf69b.js",
+    "precache-manifest.bc09312e71663d2d2d217f5862932076.js": "/precache-manifest.bc09312e71663d2d2d217f5862932076.js",
     "service-worker.js": "/service-worker.js",
-    "static/css/2.38e21ec7.chunk.css.map": "/static/css/2.38e21ec7.chunk.css.map",
-    "static/css/main.4302a2da.chunk.css.map": "/static/css/main.4302a2da.chunk.css.map",
+    "static/css/2.e68d534f.chunk.css.map": "/static/css/2.e68d534f.chunk.css.map",
+    "static/css/main.0c827e1e.chunk.css.map": "/static/css/main.0c827e1e.chunk.css.map",
+    "static/js/2.abb4268f.chunk.js.LICENSE.txt": "/static/js/2.abb4268f.chunk.js.LICENSE.txt",
     "static/media/main.css": "/static/media/swift.5517bcc5.svg",
     "static/media/5.png": "/static/media/5.0168403a.png",
     "static/media/66.png": "/static/media/66.c9f419e2.png",
@@ -99,5 +100,12 @@
     "static/media/wide.svg": "/static/media/wide.ee3b9bdc.svg",
     "static/media/widePayment.svg": "/static/media/widePayment.0fd74a33.svg",
     "static/media/woocommerce.svg": "/static/media/woocommerce.b2c1823e.svg"
-  }
+  },
+  "entrypoints": [
+    "static/js/runtime-main.9aba0c70.js",
+    "static/css/2.e68d534f.chunk.css",
+    "static/js/2.abb4268f.chunk.js",
+    "static/css/main.0c827e1e.chunk.css",
+    "static/js/main.a706c72a.chunk.js"
+  ]
 }
