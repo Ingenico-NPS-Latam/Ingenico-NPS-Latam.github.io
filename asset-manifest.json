@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/static/css/main.0c827e1e.chunk.css",
-    "main.js": "/static/js/main.715d6b5f.chunk.js",
-    "main.js.map": "/static/js/main.715d6b5f.chunk.js.map",
-    "runtime-main.js": "/static/js/runtime-main.0e92b2f1.js",
-    "runtime-main.js.map": "/static/js/runtime-main.0e92b2f1.js.map",
+    "main.css": "/static/css/main.5b9fe9e2.chunk.css",
+    "main.js": "/static/js/main.d7e7be32.chunk.js",
+    "main.js.map": "/static/js/main.d7e7be32.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.9aba0c70.js",
+    "runtime-main.js.map": "/static/js/runtime-main.9aba0c70.js.map",
     "static/css/2.b39a45d5.chunk.css": "/static/css/2.b39a45d5.chunk.css",
-    "static/js/2.172d3e95.chunk.js": "/static/js/2.172d3e95.chunk.js",
-    "static/js/2.172d3e95.chunk.js.map": "/static/js/2.172d3e95.chunk.js.map",
+    "static/js/2.6749e1a0.chunk.js": "/static/js/2.6749e1a0.chunk.js",
+    "static/js/2.6749e1a0.chunk.js.map": "/static/js/2.6749e1a0.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.85d908309d095e5467f2381759b21c95.js": "/precache-manifest.85d908309d095e5467f2381759b21c95.js",
+    "precache-manifest.505c3f1e11b98a91b0a80d0ac9f06481.js": "/precache-manifest.505c3f1e11b98a91b0a80d0ac9f06481.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.b39a45d5.chunk.css.map": "/static/css/2.b39a45d5.chunk.css.map",
-    "static/css/main.0c827e1e.chunk.css.map": "/static/css/main.0c827e1e.chunk.css.map",
-    "static/js/2.172d3e95.chunk.js.LICENSE.txt": "/static/js/2.172d3e95.chunk.js.LICENSE.txt",
+    "static/css/main.5b9fe9e2.chunk.css.map": "/static/css/main.5b9fe9e2.chunk.css.map",
+    "static/js/2.6749e1a0.chunk.js.LICENSE.txt": "/static/js/2.6749e1a0.chunk.js.LICENSE.txt",
     "static/media/main.css": "/static/media/swift.5517bcc5.svg",
     "static/media/5.png": "/static/media/5.0168403a.png",
     "static/media/66.png": "/static/media/66.c9f419e2.png",
@@ -102,10 +102,10 @@
     "static/media/woocommerce.svg": "/static/media/woocommerce.b2c1823e.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.0e92b2f1.js",
+    "static/js/runtime-main.9aba0c70.js",
     "static/css/2.b39a45d5.chunk.css",
-    "static/js/2.172d3e95.chunk.js",
-    "static/css/main.0c827e1e.chunk.css",
-    "static/js/main.715d6b5f.chunk.js"
+    "static/js/2.6749e1a0.chunk.js",
+    "static/css/main.5b9fe9e2.chunk.css",
+    "static/js/main.d7e7be32.chunk.js"
   ]
 }
