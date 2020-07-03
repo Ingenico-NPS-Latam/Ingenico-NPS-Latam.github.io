@@ -25,6 +25,8 @@ try {
     data.add("psp_3dSecure_CAVV", "AAABBYZ3N5Qhl3kBU3c3ELGUsMY=");
     data.add("psp_3dSecure_ECI", "05");
     data.add("psp_3dSecure_Secured", "1");
+    data.Add("psp_3dSecure_ProtocolVersion", "2.1.0");
+    data.Add("psp_3dSecure_DirectoryServerTransactionId", "c4e59ceb-a382-4d6a-bc87-385d591fa09d");
     RootElement response = npsSdk.authorize_2p(data);
 
 } catch (WsdlHandlerException ex) {

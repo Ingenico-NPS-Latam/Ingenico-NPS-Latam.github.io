@@ -72,6 +72,11 @@ int main(int argc, char **argv) {
     pRequest->psp_3dSecure_Secured = malloc(strlen('1')+1);
     strcpy(pRequest->psp_3dSecure_Secured, '1');
 
+    pRequest->psp_3dSecure_ProtocolVersion = malloc(strlen('2.1.0')+1);
+    strcpy(pRequest->psp_3dSecure_ProtocolVersion, '2.1.0');
+
+    pRequest->psp_3dSecure_DirectoryServerTransactionId = malloc(strlen('c4e59ceb-a382-4d6a-bc87-385d591fa09d')+1);
+    strcpy(pRequest->psp_3dSecure_DirectoryServerTransactionId, 'c4e59ceb-a382-4d6a-bc87-385d591fa09d');
 
     pResponse = &Response;
 

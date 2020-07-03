@@ -43,6 +43,8 @@ ArrayOfQueryTxsTransactions.psp_3dSecure_CAVV = "AAABBYZ3N5Qhl3kBU3c3ELGUsMY="
 ArrayOfQueryTxsTransactions.psp_3dSecure_Eci = "05"
 ArrayOfQueryTxsTransactions.psp_3dSecure_EciMsg = ""
 ArrayOfQueryTxsTransactions.psp_3dSecure_Secured = "1"
+ArrayOfQueryTxsTransactions.psp_3dSecure_ProtocolVersion = "2.1.0"
+ArrayOfQueryTxsTransactions.psp_3dSecure_DirectoryServerTransactionId = "c4e59ceb-a382-4d6a-bc87-385d591fa09d"
 ArrayOfQueryTxsTransactions.psp_CreatedAt = "2008-01-12 13:05:35-03:00"
 
 pspAmountAdditionalDetails = {}

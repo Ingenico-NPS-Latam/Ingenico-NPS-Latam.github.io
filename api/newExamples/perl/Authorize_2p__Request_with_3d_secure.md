@@ -26,6 +26,8 @@ my $params = {
     "psp_3dSecure_CAVV" => "AAABBYZ3N5Qhl3kBU3c3ELGUsMY=",
     "psp_3dSecure_ECI" => "05",
     "psp_3dSecure_Secured" => "1",
+    'psp_3dSecure_ProtocolVersion' => '2.1.0', 
+    'psp_3dSecure_DirectoryServerTransactionId' => 'c4e59ceb-a382-4d6a-bc87-385d591fa09d'
 };
 
 my $response = NpsSDK::Nps::authorize_2p($params);

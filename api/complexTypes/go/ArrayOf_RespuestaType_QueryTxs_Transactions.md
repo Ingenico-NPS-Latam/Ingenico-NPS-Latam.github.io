@@ -43,6 +43,8 @@ ArrayOfQueryTxsTransactions.Psp_3dSecure_Eci = "05"
 ArrayOfQueryTxsTransactions.Psp_3dSecure_EciMsg = ""
 ArrayOfQueryTxsTransactions.Psp_3dSecure_Secured = "1"
 ArrayOfQueryTxsTransactions.Psp_CreatedAt = "2008-01-12 13:05:35-03:00"
+ArrayOfQueryTxsTransactions.psp_3dSecure_ProtocolVersion = "2.1.0"
+ArrayOfQueryTxsTransactions.psp_3dSecure_DirectoryServerTransactionId = "c4e59ceb-a382-4d6a-bc87-385d591fa09d"
 
 pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsRequestStruct()
 pspAmountAdditionalDetails.Tip = "20000"

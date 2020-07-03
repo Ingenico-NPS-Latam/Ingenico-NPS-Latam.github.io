@@ -23,6 +23,8 @@ payonline2p.psp_3dSecure_XID = "MjY0MjAxNjA4MDIyMDUzMzYyNjU="
 payonline2p.psp_3dSecure_CAVV = "AAABBYZ3N5Qhl3kBU3c3ELGUsMY="
 payonline2p.psp_3dSecure_ECI = "05"
 payonline2p.psp_3dSecure_Secured = "1"
+payOnLine2p.psp_3dSecure_ProtocolVersion = "2.1.0"
+payOnLine2p.psp_3dSecure_DirectoryServerTransactionId = "c4e59ceb-a382-4d6a-bc87-385d591fa09d"
 
 response = nps.pay_online_2p(payonline2p)
 

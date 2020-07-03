@@ -41,6 +41,8 @@ SimpleQueryTxTransactions.Psp_3dSecure_CAVV = "AAABBYZ3N5Qhl3kBU3c3ELGUsMY="
 SimpleQueryTxTransactions.Psp_3dSecure_Eci = "05"
 SimpleQueryTxTransactions.Psp_3dSecure_EciMsg = ""
 SimpleQueryTxTransactions.Psp_3dSecure_Secured = "1"
+SimpleQueryTxTransactions.psp_3dSecure_ProtocolVersion = "2.1.0"
+SimpleQueryTxTransactions.psp_3dSecure_DirectoryServerTransactionId = "c4e59ceb-a382-4d6a-bc87-385d591fa09d"
 SimpleQueryTxTransactions.Psp_CreatedAt = "2008-01-12 13:05:35-03:00"
 
 pspAmountAdditionalDetails := nps.NewAmountAdditionalDetailsRequestStruct()

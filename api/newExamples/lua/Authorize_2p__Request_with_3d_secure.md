@@ -22,6 +22,8 @@ authorize2p.psp_3dSecure_XID = "MjY0MjAxNjA4MDIyMDUzMzYyNjU="
 authorize2p.psp_3dSecure_CAVV = "AAABBYZ3N5Qhl3kBU3c3ELGUsMY="
 authorize2p.psp_3dSecure_ECI = "05"
 authorize2p.psp_3dSecure_Secured = "1"
+authorize2p.psp_3dSecure_ProtocolVersion = "2.1.0"
+authorize2p.psp_3dSecure_DirectoryServerTransactionId = "c4e59ceb-a382-4d6a-bc87-385d591fa09d"
 
 response = nps.authorize_2p(authorize2p)
 

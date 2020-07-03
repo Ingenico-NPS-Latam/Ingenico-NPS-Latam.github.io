@@ -37,6 +37,8 @@ PayOnLine2p.Psp_3dSecure_XID = "MjY0MjAxNjA4MDIyMDUzMzYyNjU="
 PayOnLine2p.Psp_3dSecure_CAVV = "AAABBYZ3N5Qhl3kBU3c3ELGUsMY="
 PayOnLine2p.Psp_3dSecure_ECI = "05"
 PayOnLine2p.Psp_3dSecure_Secured = "1"
+PayOnLine2p.psp_3dSecure_ProtocolVersion = "2.1.0"
+PayOnLine2p.psp_3dSecure_DirectoryServerTransactionId = "c4e59ceb-a382-4d6a-bc87-385d591fa09d"
 
 resp, err := service.PayOnLine_2p(PayOnLine2p)
 
