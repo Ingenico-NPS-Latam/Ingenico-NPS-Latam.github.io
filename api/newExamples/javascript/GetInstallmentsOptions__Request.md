@@ -1,7 +1,7 @@
 NPS.setClientSession('__YOUR_NPS_CLIENT_SESSION__');
 NPS.setMerchantId('sdk_test');
 
-NPS.setAmount('120050');
+NPS.setAmount('120000');
 NPS.setCountry('CHL');
 NPS.setCurrency('152');
 

@@ -6,7 +6,7 @@ import com.github.ingeniconpslatam.nps.PaymentMethodToken;
 
 
 Nps nps = new Nps(Nps.SANDBOX, "__YOUR_NPS_CLIENT_SESSION__", "__YOUR_NPS_MERCHANT_ID__");
-nps.setAmount('120050');
+nps.setAmount('120000');
 nps.setCountry('CHL');
 nps.setCurrency('152');
 
