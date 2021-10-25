@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   viewBox="0 0 128 128"
+   version="1.1"
+   id="svg27"
+   sodipodi:docname="directPayment.svg"
+   inkscape:version="0.92.2 (unknown)">
+  <metadata
+     id="metadata31">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1920"
+     inkscape:window-height="1027"
+     id="namedview29"
+     showgrid="false"
+     inkscape:zoom="3.6875"
+     inkscape:cx="-0.079048136"
+     inkscape:cy="58.928021"
+     inkscape:window-x="0"
+     inkscape:window-y="0"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="_07_Target_Keyword" />
+  <defs
+     id="defs4">
+    <style
+       id="style2">.cls-1{fill:#c3edf5;}.cls-2{fill:#87dbec;}.cls-3{fill:none;stroke:#4d91bb;stroke-miterlimit:10;stroke-width:8px;}.cls-4{fill:#4dbab4;}</style>
+  </defs>
+  <title
+     id="title6" />
+  <g
+     data-name="07 Target Keyword"
+     id="_07_Target_Keyword">
+    <circle
+       class="cls-1"
+       cx="64"
+       cy="64"
+       r="42"
+       id="circle8"
+       style="fill:#00dcf0;fill-opacity:1" />
+    <path
+       class="cls-2"
+       d="M64,106a42,42,0,0,0,42-42A38,38,0,1,1,68,26a38,38,0,0,1,38,38,42,42,0,0,0-83.95-2.17C22,62.55,22,63.27,22,64s0,1.45.05,2.17A42,42,0,0,0,64,106Z"
+       id="path10"
+       style="fill:#009aa9;fill-opacity:1" />
+    <circle
+       class="cls-2"
+       cx="68"
+       cy="64"
+       r="18"
+       id="circle12"
+       style="fill:#009aa9;fill-opacity:1" />
+    <circle
+       class="cls-3"
+       cx="64"
+       cy="64"
+       r="42"
+       id="circle14"
+       style="stroke:#545960;stroke-opacity:1" />
+    <circle
+       class="cls-4"
+       cx="64"
+       cy="64"
+       r="18"
+       id="circle16"
+       style="fill:#545960;fill-opacity:1" />
+    <line
+       class="cls-3"
+       x1="64"
+       x2="64"
+       y1="12"
+       y2="32"
+       id="line18"
+       style="stroke:#545960;stroke-opacity:1" />
+    <line
+       class="cls-3"
+       x1="64"
+       x2="64"
+       y1="96"
+       y2="116"
+       id="line20"
+       style="stroke:#545960;stroke-opacity:1" />
+    <line
+       class="cls-3"
+       x1="116"
+       x2="96"
+       y1="64"
+       y2="64"
+       id="line22"
+       style="stroke:#545960;stroke-opacity:1" />
+    <line
+       class="cls-3"
+       x1="32"
+       x2="12"
+       y1="64"
+       y2="64"
+       id="line24"
+       style="stroke:#545960;stroke-opacity:1" />
+  </g>
+</svg>
